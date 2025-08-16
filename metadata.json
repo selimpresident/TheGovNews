@@ -1,0 +1,6 @@
+{
+  "name": "TheGovNews - Government News Aggregator",
+  "description": "An intelligent aggregator for official government news sources. It automatically fetches, processes, and enriches content, providing users with a reliable, searchable, and filterable feed of public information.",
+  "requestFramePermissions": [],
+  "prompt": ""
+}

@@ -1,0 +1,32 @@
+{
+  "translation": {
+    "TheGovNews": "TheGovNews",
+    "Admin Panel": "Yönetim Paneli",
+    "AI Analyst": "YZ Analisti",
+    "Compare": "Karşılaştır",
+    "Search Countries": "Ülke Ara",
+    "Ask anything about global events...": "Küresel olaylar hakkında her şeyi sorun...",
+    "Official": "Resmi",
+    "Intelligence": "İstihbarat",
+    "Data": "Veri",
+    "All Sources": "Tüm Kaynaklar",
+    "Bookmarks": "Yer İmleri",
+    "Organizations": "Uluslararası Kurumlar",
+    "Search organizations or members...": "Kurum veya üye ara...",
+    "intelligenceSource": {
+        "socialMedia": "Sosyal Medya Akışı",
+        "conflictReport": "Çatışma Raporu",
+        "globalMediaWatch": "Küresel Medya Takibi",
+        "nationalPress": "Ulusal Basın"
+    },
+    "dataSource": {
+        "countryProfile": "Ülke Profili (CIA)",
+        "economicIndicators": "Ekonomik Göstergeler",
+        "oecdEconomicOutlook": "OECD Ekonomik Görünüm",
+        "roadNetwork": "Yol Ağı",
+        "climateEnvironment": "İklim & Çevre",
+        "humanitarianUpdates": "İnsani Yardım Güncellemeleri",
+        "populationPyramid": "Nüfus Piramidi"
+    }
+  }
+}

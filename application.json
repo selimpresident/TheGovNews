@@ -1,0 +1,2532 @@
+
+{
+  "ulkeler": [
+    {
+      "ulke": "Afganistan",
+      "yasama_organi": "Milli Meclis (faaliyeti askıda)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Resmi Gazete (faaliyeti askıda)",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fa": "Salam (سلام)",
+        "ps": "Pə khayr raghlast (پخير راغلۍ)"
+      }
+    },
+    {
+      "ulke": "Almanya",
+      "yasama_organi": "Bundestag",
+      "yasama_organi_sitesi": "https://www.bundestag.de/",
+      "resmi_gazete": "Bundesgesetzblatt (BGBl)",
+      "resmi_gazete_sitesi": "https://www.bgbl.de/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "de": "Hallo"
+      }
+    },
+    {
+      "ulke": "Amerika Birleşik Devletleri",
+      "yasama_organi": "Kongre (Congress)",
+      "yasama_organi_sitesi": "https://www.congress.gov/",
+      "resmi_gazete": "Federal Register",
+      "resmi_gazete_sitesi": "https://www.federalregister.gov/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Andorra",
+      "yasama_organi": "Genel Konsey (Consell General)",
+      "yasama_organi_sitesi": "https://www.consellgeneral.ad/",
+      "resmi_gazete": "Butlletí Oficial del Principat d'Andorra (BOPA)",
+      "resmi_gazete_sitesi": "https://www.bopa.ad/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ca": "Hola"
+      }
+    },
+    {
+      "ulke": "Angola",
+      "yasama_organi": "Milli Meclis (Assembleia Nacional)",
+      "yasama_organi_sitesi": "https://www.parlamento.ao/",
+      "resmi_gazete": "Diário da República",
+      "resmi_gazete_sitesi": "https://www.imprensanacional.gov.ao/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Antigua ve Barbuda",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.ab.gov.ag/gov_v2/government/parliament.html",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://gazette.laws.gov.ag/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Arjantin",
+      "yasama_organi": "Millet Kongresi (Congreso de la Nación Argentina)",
+      "yasama_organi_sitesi": "https://www.congreso.gob.ar/",
+      "resmi_gazete": "Boletín Oficial de la República Argentina",
+      "resmi_gazete_sitesi": "https://www.boletinoficial.gob.ar/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Arnavutluk",
+      "yasama_organi": "Meclis (Kuvendi i Shqipërisë)",
+      "yasama_organi_sitesi": "https://www.parlament.al/",
+      "resmi_gazete": "Fletorja Zyrtare",
+      "resmi_gazete_sitesi": "https://www.qbz.gov.al/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sq": "Përshëndetje"
+      }
+    },
+    {
+      "ulke": "Avustralya",
+      "yasama_organi": "Parlamento (Parliament of Australia)",
+      "yasama_organi_sitesi": "https://www.aph.gov.au/",
+      "resmi_gazete": "Federal Register of Legislation",
+      "resmi_gazete_sitesi": "https://www.legislation.gov.au/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Avusturya",
+      "yasama_organi": "Parlamento (Österreichisches Parlament)",
+      "yasama_organi_sitesi": "https://www.parlament.gv.at/",
+      "resmi_gazete": "Rechtsinformationssystem des Bundes (RIS)",
+      "resmi_gazete_sitesi": "https://www.ris.bka.gv.at/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "de": "Hallo"
+      }
+    },
+    {
+      "ulke": "Azerbaycan",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.meclis.gov.az/",
+      "resmi_gazete": "E-qanun.az",
+      "resmi_gazete_sitesi": "https://e-qanun.az/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "az": "Salam"
+      }
+    },
+    {
+      "ulke": "Bahamalar",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.bahamas.gov.bs/wps/portal/public/gov/government/judiciary/the%20legislature/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://laws.bahamas.gov.bs/cms/en/gazettes.html",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Bahreyn",
+      "yasama_organi": "Milli Meclis (Temsilciler Konseyi ve Şura Konseyi)",
+      "yasama_organi_sitesi": "https://www.nuwab.bh/",
+      "resmi_gazete": "Al-Jarida Al-Rasmiya",
+      "resmi_gazete_sitesi": "https://www.legalaffairs.gov.bh/gazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Bangladeş",
+      "yasama_organi": "Jatiya Sangsad (Millet Meclisi)",
+      "yasama_organi_sitesi": "http://www.parliament.gov.bd/",
+      "resmi_gazete": "Bangladesh Gazette",
+      "resmi_gazete_sitesi": "http://www.dpp.gov.bd/bgpress/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "bn": "Namaskar (নমস্কার)"
+      }
+    },
+    {
+      "ulke": "Barbados",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.barbadosparliament.com/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://gisbarbados.gov.bb/publications/official-gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Belçika",
+      "yasama_organi": "Federal Parlamento",
+      "yasama_organi_sitesi": "https://www.fed-parl.be/",
+      "resmi_gazete": "Belgisch Staatsblad / Moniteur Belge",
+      "resmi_gazete_sitesi": "https://www.ejustice.just.fgov.be/cgi/welcome.pl",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "nl": "Hallo",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Belize",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.nationalassembly.gov.bz/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.pressoffice.gov.bz/government-gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Benin",
+      "yasama_organi": "Milli Meclis (Assemblée Nationale)",
+      "yasama_organi_sitesi": "https://assemblee-nationale.bj/",
+      "resmi_gazete": "Journal Officiel de la République du Bénin",
+      "resmi_gazete_sitesi": "https://sgg.gouv.bj/jo/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Beyaz Rusya (Belarus)",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "http://www.sovrep.gov.by/en/",
+      "resmi_gazete": "Natsional'nyy pravovoy Internet-portal",
+      "resmi_gazete_sitesi": "https://pravo.by/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "be": "Pryvitannie (Прывітанне)"
+      }
+    },
+    {
+      "ulke": "Bhutan",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.bt/",
+      "resmi_gazete": "Resmi Gazete",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "dz": "Kuzu zangpo"
+      }
+    },
+    {
+      "ulke": "Birleşik Arap Emirlikleri",
+      "yasama_organi": "Federal Ulusal Konsey (Federal National Council)",
+      "yasama_organi_sitesi": "https://www.almajles.gov.ae/",
+      "resmi_gazete": "Resmi Gazete",
+      "resmi_gazete_sitesi": "https://www.moj.gov.ae/en/laws-and-legislations/official-gazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Birleşik Krallık",
+      "yasama_organi": "Parlamento (Parliament of the United Kingdom)",
+      "yasama_organi_sitesi": "https://www.parliament.uk/",
+      "resmi_gazete": "The Gazette",
+      "resmi_gazete_sitesi": "https://www.thegazette.co.uk/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Bolivya",
+      "yasama_organi": "Çokuluslu Yasama Meclisi",
+      "yasama_organi_sitesi": "https://www.diputados.bo/",
+      "resmi_gazete": "Gaceta Oficial de Bolivia",
+      "resmi_gazete_sitesi": "https://www.gacetaoficialdebolivia.gob.bo/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Bosna-Hersek",
+      "yasama_organi": "Parlamenterler Meclisi",
+      "yasama_organi_sitesi": "https://www.parlament.ba/",
+      "resmi_gazete": "Službeni glasnik BiH",
+      "resmi_gazete_sitesi": "http://www.sluzbenilist.ba/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "bs": "Zdravo"
+      }
+    },
+    {
+      "ulke": "Botsvana",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.bw/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.elaws.gov.bw/gazettes.php",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tn": "Dumela"
+      }
+    },
+    {
+      "ulke": "Brezilya",
+      "yasama_organi": "Milli Kongre (Congresso Nacional)",
+      "yasama_organi_sitesi": "https://www.congressonacional.leg.br/",
+      "resmi_gazete": "Diário Oficial da União",
+      "resmi_gazete_sitesi": "https://www.in.gov.br/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Brunei Sultanlığı",
+      "yasama_organi": "Yasama Konseyi",
+      "yasama_organi_sitesi": "http://www.councils.gov.bn/",
+      "resmi_gazete": "Attorney General's Chambers",
+      "resmi_gazete_sitesi": "http://www.agc.gov.bn/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ms": "Selamat datang"
+      }
+    },
+    {
+      "ulke": "Bulgaristan",
+      "yasama_organi": "Millet Meclisi (Narodno Sabranie)",
+      "yasama_organi_sitesi": "https://www.parliament.bg/",
+      "resmi_gazete": "Държавен вестник (State Gazette)",
+      "resmi_gazete_sitesi": "https://dv.parliament.bg/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "bg": "Zdraveĭte (Здравейте)"
+      }
+    },
+    {
+      "ulke": "Burkina Faso",
+      "yasama_organi": "Geçici Yasama Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel du Faso",
+      "resmi_gazete_sitesi": "https://sgg-cm.gov.bf/journal-officiel/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Burundi",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.assemblee.bi/",
+      "resmi_gazete": "Bulletin Officiel du Burundi",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "rn": "Bwakeye"
+      }
+    },
+    {
+      "ulke": "Cabo Verde",
+      "yasama_organi": "Milli Meclis (Assembleia Nacional)",
+      "yasama_organi_sitesi": "https://www.parlamento.cv/",
+      "resmi_gazete": "Boletim Oficial",
+      "resmi_gazete_sitesi": "https://kiosk.incv.cv/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Cezayir",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.apn.dz/",
+      "resmi_gazete": "Journal Officiel de la République Algérienne",
+      "resmi_gazete_sitesi": "https://www.joradp.dz/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Cibuti",
+      "yasama_organi": "Milli Meclis (Assemblée Nationale)",
+      "yasama_organi_sitesi": "http://www.assemblee-nationale.dj/",
+      "resmi_gazete": "Journal Officiel de la République de Djibouti",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "ar": "Marhaban"
+      }
+    },
+    {
+      "ulke": "Çad",
+      "yasama_organi": "Geçici Ulusal Konsey",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel de la République du Tchad",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "ar": "Marhaban"
+      }
+    },
+    {
+      "ulke": "Çekya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.psp.cz/sqw/hp.sqw?k=19",
+      "resmi_gazete": "Sbírka zákonů",
+      "resmi_gazete_sitesi": "https://www.mvcr.cz/clanek/sbirka-zakonu.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "cs": "Ahoj"
+      }
+    },
+    {
+      "ulke": "Çin Halk Cumhuriyeti",
+      "yasama_organi": "Ulusal Halk Kongresi (National People's Congress)",
+      "yasama_organi_sitesi": "http://www.npc.gov.cn/englishnpc/",
+      "resmi_gazete": "State Council Gazette",
+      "resmi_gazete_sitesi": "http://www.gov.cn/gongbao/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "zh": "Nǐ hǎo (你好)"
+      }
+    },
+    {
+      "ulke": "Danimarka",
+      "yasama_organi": "Folketing (Parlamento)",
+      "yasama_organi_sitesi": "https://www.ft.dk/",
+      "resmi_gazete": "Lovtidende",
+      "resmi_gazete_sitesi": "https://www.lovtidende.dk/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "da": "Hej"
+      }
+    },
+    {
+      "ulke": "Demokratik Kongo Cumhuriyeti",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.assemblee-nationale.cd/",
+      "resmi_gazete": "Journal Officiel de la RDC",
+      "resmi_gazete_sitesi": "http://www.journal-officiel.cd/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Dominik Cumhuriyeti",
+      "yasama_organi": "Ulusal Kongre",
+      "yasama_organi_sitesi": "https://www.congresonacional.gob.do/",
+      "resmi_gazete": "Gaceta Oficial",
+      "resmi_gazete_sitesi": "https://www.consultoria.gov.do/recursos/gacetas-oficiales",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Dominika",
+      "yasama_organi": "Meclis Evi (House of Assembly)",
+      "yasama_organi_sitesi": "http://www.dominica.gov.dm/government/house-of-assembly",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "http://www.dominica.gov.dm/laws-of-dominica",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Doğu Timor (Timor-Leste)",
+      "yasama_organi": "Ulusal Parlamento",
+      "yasama_organi_sitesi": "https://www.parlamento.tl/",
+      "resmi_gazete": "Jornal da República",
+      "resmi_gazete_sitesi": "http://www.mj.gov.tl/jornal/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá",
+        "tdt": "Bondia"
+      }
+    },
+    {
+      "ulke": "Ekvador",
+      "yasama_organi": "Milli Meclis (Asamblea Nacional)",
+      "yasama_organi_sitesi": "https://www.asambleanacional.gob.ec/",
+      "resmi_gazete": "Registro Oficial",
+      "resmi_gazete_sitesi": "https://www.registroficial.gob.ec/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Ekvator Ginesi",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://parlamento.bi/",
+      "resmi_gazete": "Boletín Oficial del Estado",
+      "resmi_gazete_sitesi": "https://www.guineaecuatorialpress.com/boe",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "El Salvador",
+      "yasama_organi": "Yasama Meclisi (Asamblea Legislativa)",
+      "yasama_organi_sitesi": "https://www.asamblea.gob.sv/",
+      "resmi_gazete": "Diario Oficial",
+      "resmi_gazete_sitesi": "https://www.diariooficial.gob.sv/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Endonezya",
+      "yasama_organi": "Halk Danışma Meclisi",
+      "yasama_organi_sitesi": "https://www.dpr.go.id/",
+      "resmi_gazete": "Lembaran Negara",
+      "resmi_gazete_sitesi": "https://jdih.setneg.go.id/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "id": "Halo"
+      }
+    },
+    {
+      "ulke": "Eritre",
+      "yasama_organi": "Milli Meclis (faaliyeti askıda)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Gazette of Eritrean Laws",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ti": "Selam"
+      }
+    },
+    {
+      "ulke": "Ermenistan",
+      "yasama_organi": "Milli Meclis (Azgayin Zhoghov)",
+      "yasama_organi_sitesi": "http://www.parliament.am/",
+      "resmi_gazete": "Resmi Bültenler",
+      "resmi_gazete_sitesi": "https://www.arlis.am/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "hy": "Barev (Բարև)"
+      }
+    },
+    {
+      "ulke": "Estonya",
+      "yasama_organi": "Riigikogu (Parlamento)",
+      "yasama_organi_sitesi": "https://www.riigikogu.ee/",
+      "resmi_gazete": "Riigi Teataja",
+      "resmi_gazete_sitesi": "https://www.riigiteataja.ee/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "et": "Tere"
+      }
+    },
+    {
+      "ulke": "Esvatini (Svaziland)",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.sz/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.eswatinilii.org/sz/legislation/gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ss": "Sawubona"
+      }
+    },
+    {
+      "ulke": "Etiyopya",
+      "yasama_organi": "Federal Parlamenter Meclis",
+      "yasama_organi_sitesi": "https://www.hopr.gov.et/",
+      "resmi_gazete": "Federal Negarit Gazeta",
+      "resmi_gazete_sitesi": "http://www.fsc.gov.et/federal-negarit-gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "am": "Selam (ሰላም)"
+      }
+    },
+    {
+      "ulke": "Fas",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.chambredesrepresentants.ma/",
+      "resmi_gazete": "Bulletin Officiel",
+      "resmi_gazete_sitesi": "http://www.sgg.gov.ma/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Fiji",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.fj/",
+      "resmi_gazete": "Government of Fiji Gazette",
+      "resmi_gazete_sitesi": "https://www.laws.gov.fj/Gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fj": "Bula"
+      }
+    },
+    {
+      "ulke": "Fildişi Sahili",
+      "yasama_organi": "Milli Meclis (Assemblée Nationale)",
+      "yasama_organi_sitesi": "https://www.assnat.ci/",
+      "resmi_gazete": "Journal Officiel de la République de Côte d'Ivoire",
+      "resmi_gazete_sitesi": "https://www.jo.gouv.ci/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Filipinler",
+      "yasama_organi": "Kongre",
+      "yasama_organi_sitesi": "http://legacy.senate.gov.ph/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://www.officialgazette.gov.ph/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tl": "Kumusta"
+      }
+    },
+    {
+      "ulke": "Filistin Devleti",
+      "yasama_organi": "Filistin Yasama Konseyi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Al-Waqa'i' al-Filistiniyya",
+      "resmi_gazete_sitesi": "http://www.wafa.ps/ar_page.aspx?id=51",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Finlandiya",
+      "yasama_organi": "Eduskunta (Parlamento)",
+      "yasama_organi_sitesi": "https://www.eduskunta.fi/",
+      "resmi_gazete": "Finlex",
+      "resmi_gazete_sitesi": "https://www.finlex.fi/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fi": "Hei"
+      }
+    },
+    {
+      "ulke": "Fransa",
+      "yasama_organi": "Parlamento (Assemblée Nationale ve Sénat)",
+      "yasama_organi_sitesi": "http://www.assemblee-nationale.fr/",
+      "resmi_gazete": "Légifrance",
+      "resmi_gazete_sitesi": "https://www.legifrance.gouv.fr/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Gabon",
+      "yasama_organi": "Geçiş Dönemi Parlamentosu",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel de la République Gabonaise",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Gambiya",
+      "yasama_organi": "Milli Meclis (National Assembly)",
+      "yasama_organi_sitesi": "https://assembly.gm/",
+      "resmi_gazete": "The Gambia Gazette",
+      "resmi_gazete_sitesi": "https://www.moj.gov.gm/gambia-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Gana",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gh/",
+      "resmi_gazete": "Ghana Gazette",
+      "resmi_gazete_sitesi": "http://www.ghpublishingcompany.com/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Gine",
+      "yasama_organi": "Ulusal Geçiş Konseyi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel de la République de Guinée",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Gine-Bissau",
+      "yasama_organi": "Ulusal Halk Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Boletim Oficial",
+      "resmi_gazete_sitesi": "https://www.bolama.net/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Grenada",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.gov.gd/ministries/houses-parliament",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.gov.gd/gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Guatemala",
+      "yasama_organi": "Cumhuriyet Kongresi (Congreso de la República)",
+      "yasama_organi_sitesi": "https://www.congreso.gob.gt/",
+      "resmi_gazete": "Diario de Centro América",
+      "resmi_gazete_sitesi": "https://www.dca.gob.gt/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Guyana",
+      "yasama_organi": "Milli Meclis (National Assembly)",
+      "yasama_organi_sitesi": "https://parliament.gov.gy/",
+      "resmi_gazete": "The Official Gazette of Guyana",
+      "resmi_gazete_sitesi": "https://officialgazette.gov.gy/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Güney Afrika",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.za/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.gov.za/documents/gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "zu": "Sawubona",
+        "af": "Goeie dag"
+      }
+    },
+    {
+      "ulke": "Güney Kore",
+      "yasama_organi": "Milli Meclis (Gukhoe)",
+      "yasama_organi_sitesi": "https://www.assembly.go.kr/",
+      "resmi_gazete": "Gwanbo (Resmi Gazete)",
+      "resmi_gazete_sitesi": "https://gwanbo.go.kr/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Güney Sudan",
+      "yasama_organi": "Geçici Ulusal Yasama Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "South Sudan Gazette",
+      "resmi_gazete_sitesi": "https://www.mojca.gov.ss/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Gürcistan",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://parliament.ge/",
+      "resmi_gazete": "Matsne",
+      "resmi_gazete_sitesi": "https://matsne.gov.ge/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ka": "Gamarjoba (გამარჯობა)"
+      }
+    },
+    {
+      "ulke": "Haiti",
+      "yasama_organi": "Parlamento (çalışmıyor)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Le Moniteur",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ht": "Bonjou"
+      }
+    },
+    {
+      "ulke": "Hindistan",
+      "yasama_organi": "Sansad (Parlamento)",
+      "yasama_organi_sitesi": "https://sansad.in/",
+      "resmi_gazete": "The Gazette of India",
+      "resmi_gazete_sitesi": "https://egazette.nic.in/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "hi": "Namaste (नमस्ते)"
+      }
+    },
+    {
+      "ulke": "Hollanda",
+      "yasama_organi": "Staten-Generaal (Parlamento)",
+      "yasama_organi_sitesi": "https://www.tweedekamer.nl/",
+      "resmi_gazete": "Staatsblad van het Koninkrijk der Nederlanden",
+      "resmi_gazete_sitesi": "https://www.officielebekendmakingen.nl/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "nl": "Hallo"
+      }
+    },
+    {
+      "ulke": "Honduras",
+      "yasama_organi": "Milli Kongre (Congreso Nacional)",
+      "yasama_organi_sitesi": "https://www.congresonacional.hn/",
+      "resmi_gazete": "La Gaceta",
+      "resmi_gazete_sitesi": "https://www.lagaceta.gob.hn/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Hırvatistan",
+      "yasama_organi": "Sabor (Parlamento)",
+      "yasama_organi_sitesi": "https://www.sabor.hr/",
+      "resmi_gazete": "Narodne novine",
+      "resmi_gazete_sitesi": "https://narodne-novine.nn.hr/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "hr": "Bok"
+      }
+    },
+    {
+      "ulke": "Irak",
+      "yasama_organi": "Temsilciler Konseyi",
+      "yasama_organi_sitesi": "https://www.parliament.iq/",
+      "resmi_gazete": "Al-Waqā'i' al-'Irāqiyya",
+      "resmi_gazete_sitesi": "https://www.moj.gov.iq/iraqigazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)",
+        "ku": "Silav"
+      }
+    },
+    {
+      "ulke": "İran",
+      "yasama_organi": "İslami Şûra Meclisi",
+      "yasama_organi_sitesi": "https://www.parliran.ir/",
+      "resmi_gazete": "Ruznāme-ye Rasmi-ye Kešvar",
+      "resmi_gazete_sitesi": "http://www.rrk.ir/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fa": "Salam (سلام)"
+      }
+    },
+    {
+      "ulke": "İrlanda",
+      "yasama_organi": "Oireachtas (Parlamento)",
+      "yasama_organi_sitesi": "https://www.oireachtas.ie/",
+      "resmi_gazete": "Iris Oifigiúil",
+      "resmi_gazete_sitesi": "https://www.irisoifigiuil.ie/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ga": "Dia dhuit"
+      }
+    },
+    {
+      "ulke": "İspanya",
+      "yasama_organi": "Cortes Generales",
+      "yasama_organi_sitesi": "https://www.congreso.es/",
+      "resmi_gazete": "Boletín Oficial del Estado (BOE)",
+      "resmi_gazete_sitesi": "https://www.boe.es/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "İsrail",
+      "yasama_organi": "Knesset",
+      "yasama_organi_sitesi": "https://main.knesset.gov.il/",
+      "resmi_gazete": "Reshumot",
+      "resmi_gazete_sitesi": "https://www.nevo.co.il/law-publications.aspx?pub=reshumot",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "he": "Shalom (שָׁלוֹם)"
+      }
+    },
+    {
+      "ulke": "İsveç",
+      "yasama_organi": "Riksdag (Parlamento)",
+      "yasama_organi_sitesi": "https://www.riksdagen.se/",
+      "resmi_gazete": "Svensk författningssamling",
+      "resmi_gazete_sitesi": "https://www.regeringen.se/rattsliga-dokument/svensk-forfattningssamling/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sv": "Hej"
+      }
+    },
+    {
+      "ulke": "İsviçre",
+      "yasama_organi": "Federal Meclis",
+      "yasama_organi_sitesi": "https://www.parlament.ch/",
+      "resmi_gazete": "Bundesblatt / Feuille fédérale / Foglio federale",
+      "resmi_gazete_sitesi": "https://www.fedlex.admin.ch/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "de": "Hallo",
+        "fr": "Bonjour",
+        "it": "Ciao"
+      }
+    },
+    {
+      "ulke": "İtalya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parlamento.it/",
+      "resmi_gazete": "Gazzetta Ufficiale",
+      "resmi_gazete_sitesi": "https://www.gazzettaufficiale.it/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "it": "Ciao"
+      }
+    },
+    {
+      "ulke": "İzlanda",
+      "yasama_organi": "Althingi (Parlamento)",
+      "yasama_organi_sitesi": "https://www.althingi.is/",
+      "resmi_gazete": "Stjórnartíðindi",
+      "resmi_gazete_sitesi": "https://www.stjornartidindi.is/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "is": "Halló"
+      }
+    },
+    {
+      "ulke": "Jamaika",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.japarliament.gov.jm/",
+      "resmi_gazete": "The Jamaica Gazette",
+      "resmi_gazete_sitesi": "https://www.japarliament.gov.jm/index.php/documents-pub/the-jamaica-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Japonya",
+      "yasama_organi": "Diet (Kokkai)",
+      "yasama_organi_sitesi": "https://www.shugiin.go.jp/",
+      "resmi_gazete": "Kanpō (Official Gazette)",
+      "resmi_gazete_sitesi": "https://kanpou.npb.go.jp/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ja": "Konnichiwa (こんにちは)"
+      }
+    },
+    {
+      "ulke": "Kamboçya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.nac.org.kh/",
+      "resmi_gazete": "Royal Gazette",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "km": "Chum reap sour (ជំរាបសួរ)"
+      }
+    },
+    {
+      "ulke": "Kamerun",
+      "yasama_organi": "Milli Meclis (Assemblée Nationale)",
+      "yasama_organi_sitesi": "http://www.assnat.cm/",
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Kanada",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parl.ca/",
+      "resmi_gazete": "Canada Gazette",
+      "resmi_gazete_sitesi": "https://canadagazette.gc.ca/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Karadağ",
+      "yasama_organi": "Parlamento (Skupština Crne Gore)",
+      "yasama_organi_sitesi": "https://www.skupstina.me/",
+      "resmi_gazete": "Službeni list Crne Gore",
+      "resmi_gazete_sitesi": "https://www.sluzbenilist.me/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sr": "Zdravo"
+      }
+    },
+    {
+      "ulke": "Katar",
+      "yasama_organi": "Şura Konseyi",
+      "yasama_organi_sitesi": "https://www.shura.qa/",
+      "resmi_gazete": "Al-Jarida Al-Rasmiya",
+      "resmi_gazete_sitesi": "https://www.almeezan.qa/OfficialGazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Kazakistan",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.parlam.kz/",
+      "resmi_gazete": "Adilet",
+      "resmi_gazete_sitesi": "https://adilet.zan.kz/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "kk": "Sälemetsiz be (Сәлеметсіз бе)"
+      }
+    },
+    {
+      "ulke": "Kenya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.parliament.go.ke/",
+      "resmi_gazete": "Kenya Gazette",
+      "resmi_gazete_sitesi": "http://kenyalaw.org/kl/index.php?id=804",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sw": "Jambo"
+      }
+    },
+    {
+      "ulke": "Kırgızistan",
+      "yasama_organi": "Yüksek Konsey (Jogorku Kenesh)",
+      "yasama_organi_sitesi": "http://www.kenesh.kg/",
+      "resmi_gazete": "Merkezi Veri Bankası",
+      "resmi_gazete_sitesi": "http://cbd.minjust.gov.kg/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ky": "Salamatsyzby (Саламатсызбы)"
+      }
+    },
+    {
+      "ulke": "Kiribati",
+      "yasama_organi": "Maneaba ni Maungatabu (Meclis)",
+      "yasama_organi_sitesi": "https://www.parliament.gov.ki/",
+      "resmi_gazete": "Kiribati Gazette",
+      "resmi_gazete_sitesi": "https://www.dfat.gov.au/about-us/publications/international-relations/kiribati-gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "gil": "Mauri"
+      }
+    },
+    {
+      "ulke": "Kolombiya",
+      "yasama_organi": "Kongre (Congreso de la República)",
+      "yasama_organi_sitesi": "http://leyes.senado.gov.co/index.php/leyes",
+      "resmi_gazete": "Diario Oficial",
+      "resmi_gazete_sitesi": "https://www.imprenta.gov.co/diario-oficial",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Komorlar",
+      "yasama_organi": "Birlik Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "ar": "Marhaban"
+      }
+    },
+    {
+      "ulke": "Kongo Cumhuriyeti",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.assemblee-nationale.cg/",
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": "https://sgg.cg/jo/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Kosova",
+      "yasama_organi": "Meclis (Kuvendi i Kosovës)",
+      "yasama_organi_sitesi": "https://www.kuvendikosoves.org/",
+      "resmi_gazete": "Gazeta Zyrtare",
+      "resmi_gazete_sitesi": "https://gzk.rks-gov.net/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sq": "Përshëndetje",
+        "sr": "Zdravo"
+      }
+    },
+    {
+      "ulke": "Kostarika",
+      "yasama_organi": "Yasama Meclisi (Asamblea Legislativa)",
+      "yasama_organi_sitesi": "https://www.asamblea.go.cr/",
+      "resmi_gazete": "La Gaceta",
+      "resmi_gazete_sitesi": "https://www.imprentanacional.go.cr/gaceta/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Kuveyt",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.kna.kw/",
+      "resmi_gazete": "Kuwait Al-Youm",
+      "resmi_gazete_sitesi": "https://www.e.gov.kw/sites/kgoarabic/Pages/Services/MOI/KuwaitAlYoum.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Kuzey Kore",
+      "yasama_organi": "Yüksek Halk Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": null,
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "Annyeong hasimnikka (안녕하십니까)"
+      }
+    },
+    {
+      "ulke": "Kuzey Makedonya",
+      "yasama_organi": "Meclis (Sobranie)",
+      "yasama_organi_sitesi": "https://www.sobranie.mk/",
+      "resmi_gazete": "Služben vesnik",
+      "resmi_gazete_sitesi": "https://www.slvesnik.com.mk/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mk": "Zdravo (Здраво)"
+      }
+    },
+    {
+      "ulke": "Küba",
+      "yasama_organi": "Halkın Gücü Ulusal Meclisi",
+      "yasama_organi_sitesi": "https://www.parlamentocubano.gob.cu/",
+      "resmi_gazete": "Gaceta Oficial de la República de Cuba",
+      "resmi_gazete_sitesi": "https://www.gacetaoficial.gob.cu/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Laos",
+      "yasama_organi": "Milli Meclis (Sapha Heng Xat)",
+      "yasama_organi_sitesi": "https://www.na.gov.la/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://laoofficialgazette.gov.la/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "lo": "Sabaidi (ສະບາຍດີ)"
+      }
+    },
+    {
+      "ulke": "Lesotho",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.ls/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://lesotholii.org/ls/legislation/official-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "st": "Lumela"
+      }
+    },
+    {
+      "ulke": "Letonya",
+      "yasama_organi": "Saeima (Parlamento)",
+      "yasama_organi_sitesi": "https://www.saeima.lv/",
+      "resmi_gazete": "Latvijas Vēstnesis",
+      "resmi_gazete_sitesi": "https://www.vestnesis.lv/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "lv": "Sveiki"
+      }
+    },
+    {
+      "ulke": "Liberya",
+      "yasama_organi": "Yasama Meclisi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "The Liberian Gazette",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Libya",
+      "yasama_organi": "Temsilciler Meclisi",
+      "yasama_organi_sitesi": "https://www.parliament.ly/",
+      "resmi_gazete": "Al-Jarida al-Rasmiyya",
+      "resmi_gazete_sitesi": "https://adala.justice.gov.ly/home/official-newspaper",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Lihtenştayn",
+      "yasama_organi": "Landtag",
+      "yasama_organi_sitesi": "https://www.landtag.li/",
+      "resmi_gazete": "Liechtensteinisches Landesgesetzblatt (LGBl)",
+      "resmi_gazete_sitesi": "https://www.gesetze.li/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "de": "Hallo"
+      }
+    },
+    {
+      "ulke": "Litvanya",
+      "yasama_organi": "Seimas (Parlamento)",
+      "yasama_organi_sitesi": "https://www.lrs.lt/",
+      "resmi_gazete": "Teisės aktų registras",
+      "resmi_gazete_sitesi": "https://www.e-tar.lt/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "lt": "Laba diena"
+      }
+    },
+    {
+      "ulke": "Lübnan",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.lp.gov.lb/",
+      "resmi_gazete": "Al-Jarida Al-Rasmiya",
+      "resmi_gazete_sitesi": "http://www.pcm.gov.lb/arabic/OfficialGazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Lüksemburg",
+      "yasama_organi": "Temsilciler Meclisi",
+      "yasama_organi_sitesi": "https://www.chd.lu/",
+      "resmi_gazete": "Legilux",
+      "resmi_gazete_sitesi": "https://legilux.public.lu/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "lb": "Moien",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Macaristan",
+      "yasama_organi": "Milli Meclis (Országgyűlés)",
+      "yasama_organi_sitesi": "https://www.parlament.hu/",
+      "resmi_gazete": "Magyar Közlöny",
+      "resmi_gazete_sitesi": "https://magyarkozlony.hu/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "hu": "Szia"
+      }
+    },
+    {
+      "ulke": "Madagaskar",
+      "yasama_organi": "Milli Meclis (Antenimierampirenena)",
+      "yasama_organi_sitesi": "http://www.assemblee-nationale.mg/",
+      "resmi_gazete": "Journal Officiel de la République de Madagascar",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mg": "Salama",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Malavi",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.mw/",
+      "resmi_gazete": "Malawi Government Gazette",
+      "resmi_gazete_sitesi": "https://www.judiciary.mw/index.php/malawi-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ny": "Moni"
+      }
+    },
+    {
+      "ulke": "Maldivler",
+      "yasama_organi": "Halk Meclisi (People's Majlis)",
+      "yasama_organi_sitesi": "https://majlis.gov.mv/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.gazette.gov.mv/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "dv": "Assalaamu alaikum"
+      }
+    },
+    {
+      "ulke": "Malezya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parlimen.gov.my/",
+      "resmi_gazete": "Federal Government Gazette",
+      "resmi_gazete_sitesi": "http://www.federalgazette.agc.gov.my/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ms": "Selamat Pagi"
+      }
+    },
+    {
+      "ulke": "Mali",
+      "yasama_organi": "Ulusal Geçiş Konseyi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel de la République du Mali",
+      "resmi_gazete_sitesi": "http://www.sgg-mali.ml/journeaux.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Malta",
+      "yasama_organi": "Temsilciler Meclisi",
+      "yasama_organi_sitesi": "https://parlament.mt/",
+      "resmi_gazete": "The Malta Government Gazette",
+      "resmi_gazete_sitesi": "https://legislation.mt/Gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mt": "Bonġu"
+      }
+    },
+    {
+      "ulke": "Marshall Adaları",
+      "yasama_organi": "Nitijela (Parlamento)",
+      "yasama_organi_sitesi": "https://rmiparliament.org/",
+      "resmi_gazete": "Republic of the Marshall Islands Gazette",
+      "resmi_gazete_sitesi": "https://rmiparliament.org/cms/library/gazettes.html",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mh": "Iakwe"
+      }
+    },
+    {
+      "ulke": "Mauritius",
+      "yasama_organi": "Milli Meclis (National Assembly)",
+      "yasama_organi_sitesi": "https://mauritiusassembly.govmu.org/",
+      "resmi_gazete": "Government Gazette of Mauritius",
+      "resmi_gazete_sitesi": "https://attorneygeneral.govmu.org/Pages/Gazette/Gazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Meksika",
+      "yasama_organi": "Birlik Kongresi (Congreso de la Unión)",
+      "yasama_organi_sitesi": "http://www.diputados.gob.mx/",
+      "resmi_gazete": "Diario Oficial de la Federación",
+      "resmi_gazete_sitesi": "https://www.dof.gob.mx/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Mikronezya",
+      "yasama_organi": "Kongre",
+      "yasama_organi_sitesi": "https://www.cfsm.gov.fm/",
+      "resmi_gazete": "FSM Public Information Office",
+      "resmi_gazete_sitesi": "https://gov.fm/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Moldova",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parlament.md/",
+      "resmi_gazete": "Monitorul Oficial",
+      "resmi_gazete_sitesi": "https://www.monitorul.md/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ro": "Salut"
+      }
+    },
+    {
+      "ulke": "Monako",
+      "yasama_organi": "Ulusal Konsey (Conseil National)",
+      "yasama_organi_sitesi": "https://www.conseil-national.mc/",
+      "resmi_gazete": "Journal de Monaco",
+      "resmi_gazete_sitesi": "https://journaldemonaco.gouv.mc/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Moğolistan",
+      "yasama_organi": "Devlet Büyük Khuralı",
+      "yasama_organi_sitesi": "https://www.parliament.mn/",
+      "resmi_gazete": "Turiin Medeelel",
+      "resmi_gazete_sitesi": "https://legalinfo.mn/mn/law",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mn": "Sain baina uu (Сайн байна уу)"
+      }
+    },
+    {
+      "ulke": "Moritanya",
+      "yasama_organi": "Milli Meclis (Assemblée Nationale)",
+      "yasama_organi_sitesi": "http://www.an.mr/",
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Mozambik",
+      "yasama_organi": "Cumhuriyet Meclisi (Assembleia da República)",
+      "yasama_organi_sitesi": "https://www.parlamento.mz/",
+      "resmi_gazete": "Boletim da República",
+      "resmi_gazete_sitesi": "https://www.legis-palop.org/bd/boletins-da-republica",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Myanmar (Burma)",
+      "yasama_organi": "Birlik Meclisi (Pyidaungsu Hluttaw) (faaliyeti askıda)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Myanmar Gazette",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "my": "Mingalaba (မင်္ဂလာပါ)"
+      }
+    },
+    {
+      "ulke": "Mısır",
+      "yasama_organi": "Temsilciler Meclisi",
+      "yasama_organi_sitesi": "https://www.parliament.gov.eg/",
+      "resmi_gazete": "Al-Waqa'i' al-Misriyya",
+      "resmi_gazete_sitesi": "https://www.darelhilal.com/official-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Namibya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.na/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://laws.parliament.na/cms_documents/gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Nauru",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.naurugov.nr/government-information-office/parliament.aspx",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.ronlaw.gov.nr/nauru-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "na": "Ekamowir omo"
+      }
+    },
+    {
+      "ulke": "Nepal",
+      "yasama_organi": "Federal Parlamento",
+      "yasama_organi_sitesi": "https://parliament.gov.np/",
+      "resmi_gazete": "Nepal Gazette",
+      "resmi_gazete_sitesi": "http://www.dop.gov.np/nepal-gazette.html",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ne": "Namaste (नमस्ते)"
+      }
+    },
+    {
+      "ulke": "Nijer",
+      "yasama_organi": "Milli Meclis (faaliyeti askıda)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel de la République du Niger",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Nijerya",
+      "yasama_organi": "Milli Meclis (National Assembly)",
+      "yasama_organi_sitesi": "https://www.nass.gov.ng/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://www.placng.org/legist/official-gazettes/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Nikaragua",
+      "yasama_organi": "Milli Meclis (Asamblea Nacional)",
+      "yasama_organi_sitesi": "https://www.asamblea.gob.ni/",
+      "resmi_gazete": "La Gaceta, Diario Oficial",
+      "resmi_gazete_sitesi": "https://www.lagaceta.gob.ni/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Norveç",
+      "yasama_organi": "Storting (Parlamento)",
+      "yasama_organi_sitesi": "https://www.stortinget.no/",
+      "resmi_gazete": "Norsk Lovtidend",
+      "resmi_gazete_sitesi": "https://lovdata.no/info/lovtidend",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "no": "Hei"
+      }
+    },
+    {
+      "ulke": "Orta Afrika Cumhuriyeti",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "sg": "Balao"
+      }
+    },
+    {
+      "ulke": "Özbekistan",
+      "yasama_organi": "Oliy Majlis",
+      "yasama_organi_sitesi": "https://www.parliament.gov.uz/",
+      "resmi_gazete": "National Database of Legislation (Lex.uz)",
+      "resmi_gazete_sitesi": "https://lex.uz/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "uz": "Assalomu alaykum"
+      }
+    },
+    {
+      "ulke": "Pakistan",
+      "yasama_organi": "Parlamento (Majlis-e-Shoora)",
+      "yasama_organi_sitesi": "https://www.na.gov.pk/",
+      "resmi_gazete": "The Gazette of Pakistan",
+      "resmi_gazete_sitesi": "http://www.ppd.gov.pk/gazette_of_pakistan.html",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ur": "Assalam-o-Alaikum (السلام علیکم)"
+      }
+    },
+    {
+      "ulke": "Palau",
+      "yasama_organi": "Olbiil Era Kelulau (Ulusal Kongre)",
+      "yasama_organi_sitesi": "http://www.palauoek.com/",
+      "resmi_gazete": null,
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pau": "Alii"
+      }
+    },
+    {
+      "ulke": "Panama",
+      "yasama_organi": "Milli Meclis (Asamblea Nacional)",
+      "yasama_organi_sitesi": "https://www.asamblea.gob.pa/",
+      "resmi_gazete": "Gaceta Oficial Digital",
+      "resmi_gazete_sitesi": "https://www.gacetaoficial.gob.pa/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Papua Yeni Gine",
+      "yasama_organi": "Ulusal Parlamento",
+      "yasama_organi_sitesi": "http://www.parliament.gov.pg/",
+      "resmi_gazete": "National Gazette",
+      "resmi_gazete_sitesi": "https://www.paclii.org/pg/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tpi": "Gude"
+      }
+    },
+    {
+      "ulke": "Paraguay",
+      "yasama_organi": "Milli Kongre",
+      "yasama_organi_sitesi": "https://www.congreso.gov.py/",
+      "resmi_gazete": "Gaceta Oficial",
+      "resmi_gazete_sitesi": "https://www.gacetaoficial.gov.py/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola",
+        "gn": "Mba'éichapa"
+      }
+    },
+    {
+      "ulke": "Peru",
+      "yasama_organi": "Cumhuriyet Kongresi",
+      "yasama_organi_sitesi": "https://www.congreso.gob.pe/",
+      "resmi_gazete": "Diario Oficial El Peruano",
+      "resmi_gazete_sitesi": "https://elperuano.pe/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Polonya",
+      "yasama_organi": "Sejm ve Senato",
+      "yasama_organi_sitesi": "https://www.sejm.gov.pl/",
+      "resmi_gazete": "Dziennik Ustaw",
+      "resmi_gazete_sitesi": "https://isap.sejm.gov.pl/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pl": "Cześć"
+      }
+    },
+    {
+      "ulke": "Portekiz",
+      "yasama_organi": "Cumhuriyet Meclisi (Assembleia da República)",
+      "yasama_organi_sitesi": "https://www.parlamento.pt/",
+      "resmi_gazete": "Diário da República",
+      "resmi_gazete_sitesi": "https://dre.pt/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Romanya",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "http://www.cdep.ro/",
+      "resmi_gazete": "Monitorul Oficial",
+      "resmi_gazete_sitesi": "https://www.monitoruloficial.ro/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ro": "Salut"
+      }
+    },
+    {
+      "ulke": "Ruanda",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.rw/",
+      "resmi_gazete": "Official Gazette of the Republic of Rwanda",
+      "resmi_gazete_sitesi": "https://www.minijust.gov.rw/official-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "rw": "Muraho",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Rusya",
+      "yasama_organi": "Federal Meclis (State Duma ve Federation Council)",
+      "yasama_organi_sitesi": "http://duma.gov.ru/",
+      "resmi_gazete": "Rossiyskaya Gazeta",
+      "resmi_gazete_sitesi": "https://rg.ru/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ru": "Privet (Привет)"
+      }
+    },
+    {
+      "ulke": "Saint Kitts ve Nevis",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.assembly.gov.kn/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://www.sknis.gov.kn/category/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Saint Lucia",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.lc/",
+      "resmi_gazete": "Saint Lucia Government Gazette",
+      "resmi_gazete_sitesi": "https://www.govt.lc/gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Saint Vincent ve Grenadinler",
+      "yasama_organi": "Meclis Evi",
+      "yasama_organi_sitesi": "http://assembly.gov.vc/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "http://www.gov.vc/index.php/documents/gazettes",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Samoa",
+      "yasama_organi": "Yasama Meclisi",
+      "yasama_organi_sitesi": "https://www.palemene.ws/",
+      "resmi_gazete": "Samoa Gazette",
+      "resmi_gazete_sitesi": "https://www.samoalii.org/ws/legislation/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sm": "Talofa"
+      }
+    },
+    {
+      "ulke": "San Marino",
+      "yasama_organi": "Büyük ve Genel Konsey",
+      "yasama_organi_sitesi": "https://www.consigliograndeegenerale.sm/",
+      "resmi_gazete": "Bollettino Ufficiale",
+      "resmi_gazete_sitesi": "http://www.consigliograndeegenerale.sm/on-line/home/leggi-e-decreti/bollettino-ufficiale.html",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "it": "Ciao"
+      }
+    },
+    {
+      "ulke": "Sao Tome ve Principe",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www2.parlamento.st/",
+      "resmi_gazete": "Diário da República",
+      "resmi_gazete_sitesi": "https://www.legis-palop.org/bd/boletins-da-republica",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "pt": "Olá"
+      }
+    },
+    {
+      "ulke": "Senegal",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.assemblee-nationale.sn/",
+      "resmi_gazete": "Journal Officiel",
+      "resmi_gazete_sitesi": "http://www.jo.gouv.sn/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Seyşeller",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.nationalassembly.sc/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://www.gazette.sc/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour",
+        "crs": "Bonzour"
+      }
+    },
+    {
+      "ulke": "Sırbistan",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "http://www.parlament.gov.rs/",
+      "resmi_gazete": "Službeni glasnik",
+      "resmi_gazete_sitesi": "https://www.pravno-informacioni-sistem.rs/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sr": "Zdravo (Здраво)"
+      }
+    },
+    {
+      "ulke": "Sierra Leone",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.sl/",
+      "resmi_gazete": "The Sierra Leone Gazette",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Singapur",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.sg/",
+      "resmi_gazete": "Singapore Government Gazette",
+      "resmi_gazete_sitesi": "https://eservices.egazette.gov.sg/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Slovakya",
+      "yasama_organi": "Milli Konsey",
+      "yasama_organi_sitesi": "https://www.nrsr.sk/",
+      "resmi_gazete": "Zbierka zákonov",
+      "resmi_gazete_sitesi": "https://www.slov-lex.sk/pravne-predpisy",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sk": "Ahoj"
+      }
+    },
+    {
+      "ulke": "Slovenya",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.dz-rs.si/",
+      "resmi_gazete": "Uradni list",
+      "resmi_gazete_sitesi": "https://www.uradni-list.si/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sl": "Živjo"
+      }
+    },
+    {
+      "ulke": "Solomon Adaları",
+      "yasama_organi": "Ulusal Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.sb/",
+      "resmi_gazete": "Solomon Islands Gazette",
+      "resmi_gazete_sitesi": "https://www.paclii.org/sb/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Somali",
+      "yasama_organi": "Federal Parlamento",
+      "yasama_organi_sitesi": "https://parliament.gov.so/",
+      "resmi_gazete": "Faafinta Rasmiga ah",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "so": "Salaam alaykum"
+      }
+    },
+    {
+      "ulke": "Sri Lanka",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.lk/",
+      "resmi_gazete": "Gazette of the Democratic Socialist Republic of Sri Lanka",
+      "resmi_gazete_sitesi": "http://www.documents.gov.lk/en/gazette.php",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "si": "Ayubowan",
+        "ta": "Vanakkam"
+      }
+    },
+    {
+      "ulke": "Sudan",
+      "yasama_organi": "Geçici Yasama Konseyi",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Resmi Gazete",
+      "resmi_gazete_sitesi": "https://moj.gov.sd/index.php/ar/gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Surinam",
+      "yasama_organi": "Milli Meclis (De Nationale Assemblée)",
+      "yasama_organi_sitesi": "https://www.dna.sr/",
+      "resmi_gazete": "Staatsblad van de Republiek Suriname",
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "nl": "Hallo"
+      }
+    },
+    {
+      "ulke": "Suriye",
+      "yasama_organi": "Halk Meclisi",
+      "yasama_organi_sitesi": "http://parliament.gov.sy/",
+      "resmi_gazete": null,
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Suudi Arabistan",
+      "yasama_organi": "Danışma Meclisi (Majlis as-Shura)",
+      "yasama_organi_sitesi": "https://www.shura.gov.sa/",
+      "resmi_gazete": "Umm Al-Qura",
+      "resmi_gazete_sitesi": "https://www.uqn.gov.sa/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Şili",
+      "yasama_organi": "Milli Kongre",
+      "yasama_organi_sitesi": "https://www.congreso.cl/",
+      "resmi_gazete": "Diario Oficial",
+      "resmi_gazete_sitesi": "https://www.diariooficial.interior.gob.cl/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Tacikistan",
+      "yasama_organi": "Yüksek Meclis (Majlisi Oli)",
+      "yasama_organi_sitesi": "http://www.parlament.tj/",
+      "resmi_gazete": "Ulusal Hukuki Bilgi Merkezi",
+      "resmi_gazete_sitesi": "http://www.mmk.tj/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tg": "Salom (Салом)"
+      }
+    },
+    {
+      "ulke": "Tanzanya",
+      "yasama_organi": "Milli Meclis (Bunge)",
+      "yasama_organi_sitesi": "https://www.parliament.go.tz/",
+      "resmi_gazete": "Gazeti La Serikali",
+      "resmi_gazete_sitesi": "https://www.egazeti.go.tz/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sw": "Jambo"
+      }
+    },
+    {
+      "ulke": "Tayland",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.parliament.go.th/",
+      "resmi_gazete": "Royal Thai Government Gazette",
+      "resmi_gazete_sitesi": "http://www.ratchakitcha.soc.go.th/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "th": "Sawasdee (สวัสดี)"
+      }
+    },
+    {
+      "ulke": "Togo",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://assemblee-nationale.tg/",
+      "resmi_gazete": "Journal Officiel de la République Togolaise",
+      "resmi_gazete_sitesi": "https://jo.gouv.tg/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "fr": "Bonjour"
+      }
+    },
+    {
+      "ulke": "Tonga",
+      "yasama_organi": "Yasama Meclisi",
+      "yasama_organi_sitesi": "https://www.parliament.gov.to/",
+      "resmi_gazete": "Tonga Government Gazette",
+      "resmi_gazete_sitesi": "https://ago.gov.to/cms/index.php/legislation/gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "to": "Mālō e lelei"
+      }
+    },
+    {
+      "ulke": "Trinidad ve Tobago",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.ttparliament.org/",
+      "resmi_gazete": "Trinidad and Tobago Gazette",
+      "resmi_gazete_sitesi": "https://www.news.gov.tt/content/trinidad-and-tobago-gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Tunus",
+      "yasama_organi": "Halk Temsilcileri Meclisi",
+      "yasama_organi_sitesi": "http://www.arp.tn/",
+      "resmi_gazete": "Journal Officiel de la République Tunisienne",
+      "resmi_gazete_sitesi": "http://www.iort.gov.tn/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Türkmenistan",
+      "yasama_organi": "Milli Geňeş",
+      "yasama_organi_sitesi": "http://mejlis.gov.tm/",
+      "resmi_gazete": "Türkmenistan'ın Hukuki Bilgi Merkezi",
+      "resmi_gazete_sitesi": "https://justice.gov.tm/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tk": "Salam"
+      }
+    },
+    {
+      "ulke": "Tuvalu",
+      "yasama_organi": "Parlamento (Palamene o Tuvalu)",
+      "yasama_organi_sitesi": null,
+      "resmi_gazete": "Tuvalu Gazette",
+      "resmi_gazete_sitesi": "https://www.tuvalulii.tv/tv/legislation/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "tvl": "Talofa"
+      }
+    },
+    {
+      "ulke": "Türkiye",
+      "yasama_organi": "Türkiye Büyük Millet Meclisi (TBMM)",
+      "yasama_organi_sitesi": "https://www.tbmm.gov.tr/",
+      "resmi_gazete": "T.C. Resmî Gazete",
+      "resmi_gazete_sitesi": "https://www.resmigazete.gov.tr/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Uganda",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.go.ug/",
+      "resmi_gazete": "The Uganda Gazette",
+      "resmi_gazete_sitesi": "https://www.upc.go.ug/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sw": "Jambo"
+      }
+    },
+    {
+      "ulke": "Ukrayna",
+      "yasama_organi": "Verkhovna Rada (Yüksek Şûra)",
+      "yasama_organi_sitesi": "https://www.rada.gov.ua/",
+      "resmi_gazete": "Vidomosti Verkhovnoi Rady Ukrainy",
+      "resmi_gazete_sitesi": "https://zakon.rada.gov.ua/laws/main/c:12",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "uk": "Pryvit (Привіт)"
+      }
+    },
+    {
+      "ulke": "Umman",
+      "yasama_organi": "Umman Meclisi",
+      "yasama_organi_sitesi": "https://www.shura.om/",
+      "resmi_gazete": "Al-Jarida al-Rasmiyya",
+      "resmi_gazete_sitesi": "https://www.mola.gov.om/OfficialGazette.aspx",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Uruguay",
+      "yasama_organi": "Yasama Sarayı (Palacio Legislativo)",
+      "yasama_organi_sitesi": "https://parlamento.gub.uy/",
+      "resmi_gazete": "Diario Oficial",
+      "resmi_gazete_sitesi": "https://www.impo.com.uy/diariooficial/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Ürdün",
+      "yasama_organi": "Millet Meclisi",
+      "yasama_organi_sitesi": "https://www.parliament.jo/",
+      "resmi_gazete": "Al-Jarida Al-Rasmiyah",
+      "resmi_gazete_sitesi": "http://www.pm.gov.jo/newspaper",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Vanuatu",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.vu/",
+      "resmi_gazete": "Official Gazette",
+      "resmi_gazete_sitesi": "https://www.paclii.org/vu/gazette/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "bi": "Halo"
+      }
+    },
+    {
+      "ulke": "Vatikan",
+      "yasama_organi": "Papalık Kutsal Makam Komisyonu",
+      "yasama_organi_sitesi": "https://www.vaticanstate.va/it/stato-e-governo/legislazione-e-normativa/leggi-e-decreti.html",
+      "resmi_gazete": "Acta Apostolicae Sedis",
+      "resmi_gazete_sitesi": "https://www.vatican.va/archive/aas/index_it.htm",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "la": "Salve",
+        "it": "Ciao"
+      }
+    },
+    {
+      "ulke": "Venezuela",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.asambleanacional.gob.ve/",
+      "resmi_gazete": "Gaceta Oficial",
+      "resmi_gazete_sitesi": "http://www.tsj.gob.ve/gaceta-oficial",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "es": "Hola"
+      }
+    },
+    {
+      "ulke": "Vietnam",
+      "yasama_organi": "Milli Meclis (Quốc hội)",
+      "yasama_organi_sitesi": "https://www.quochoi.vn/",
+      "resmi_gazete": "Công báo",
+      "resmi_gazete_sitesi": "https://congbao.chinhphu.vn/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "vi": "Xin chào"
+      }
+    },
+    {
+      "ulke": "Yemen",
+      "yasama_organi": "Temsilciler Meclisi",
+      "yasama_organi_sitesi": "https://yemenparliament.gov.ye/",
+      "resmi_gazete": null,
+      "resmi_gazete_sitesi": null,
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "ar": "Marhaban (مرحبا)"
+      }
+    },
+    {
+      "ulke": "Yeni Zelanda",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.nz/",
+      "resmi_gazete": "New Zealand Gazette",
+      "resmi_gazete_sitesi": "https://gazette.govt.nz/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "mi": "Kia ora"
+      }
+    },
+    {
+      "ulke": "Yunanistan",
+      "yasama_organi": "Helen Parlamentosu (Vouli ton Ellinon)",
+      "yasama_organi_sitesi": "https://www.hellenicparliament.gr/",
+      "resmi_gazete": "Ethniko Typografio (Ulusal Matbaa)",
+      "resmi_gazete_sitesi": "https://www.et.gr/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "el": "Geia sas (Γειά σας)"
+      }
+    },
+    {
+      "ulke": "Zambiya",
+      "yasama_organi": "Milli Meclis",
+      "yasama_organi_sitesi": "https://www.parliament.gov.zm/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.zambialii.org/zm/legislation/gazette",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요"
+      }
+    },
+    {
+      "ulke": "Zimbabve",
+      "yasama_organi": "Parlamento",
+      "yasama_organi_sitesi": "https://www.parliament.gov.zw/",
+      "resmi_gazete": "Government Gazette",
+      "resmi_gazete_sitesi": "https://www.gp.co.zw/",
+      "greetings": {
+        "en": "Hello",
+        "tr": "Merhaba",
+        "ko": "안녕하세요",
+        "sn": "Mhoro",
+        "nd": "Salibonani"
+      }
+    }
+  ]
+}

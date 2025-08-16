@@ -1,0 +1,32 @@
+{
+  "translation": {
+    "TheGovNews": "TheGovNews",
+    "Admin Panel": "관리자 패널",
+    "AI Analyst": "AI 분석가",
+    "Compare": "비교하기",
+    "Search Countries": "국가 검색",
+    "Ask anything about global events...": "글로벌 이벤트에 대해 무엇이든 물어보세요...",
+    "Official": "공식",
+    "Intelligence": "정보",
+    "Data": "데이터",
+    "All Sources": "모든 소스",
+    "Bookmarks": "북마크",
+    "Organizations": "국제기구",
+    "Search organizations or members...": "기구 또는 회원국 검색...",
+    "intelligenceSource": {
+        "socialMedia": "소셜 미디어 피드",
+        "conflictReport": "분쟁 보고서",
+        "globalMediaWatch": "글로벌 미디어 워치",
+        "nationalPress": "국내 언론"
+    },
+    "dataSource": {
+        "countryProfile": "국가 프로필 (CIA)",
+        "economicIndicators": "경제 지표",
+        "oecdEconomicOutlook": "OECD 경제 전망",
+        "roadNetwork": "도로망",
+        "climateEnvironment": "기후 및 환경",
+        "humanitarianUpdates": "인도주의 업데이트",
+        "populationPyramid": "인구 피라미드"
+    }
+  }
+}

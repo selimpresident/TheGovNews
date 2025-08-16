@@ -1,0 +1,32 @@
+{
+  "translation": {
+    "TheGovNews": "TheGovNews",
+    "Admin Panel": "Admin Panel",
+    "AI Analyst": "AI Analyst",
+    "Compare": "Compare",
+    "Search Countries": "Search Countries",
+    "Ask anything about global events...": "Ask anything about global events...",
+    "Official": "Official",
+    "Intelligence": "Intelligence",
+    "Data": "Data",
+    "All Sources": "All Sources",
+    "Bookmarks": "Bookmarks",
+    "Organizations": "Organizations",
+    "Search organizations or members...": "Search organizations or members...",
+    "intelligenceSource": {
+        "socialMedia": "Social Media Feed",
+        "conflictReport": "Conflict Report",
+        "globalMediaWatch": "Global Media Watch",
+        "nationalPress": "National Press"
+    },
+    "dataSource": {
+        "countryProfile": "Country Profile (CIA)",
+        "economicIndicators": "Economic Indicators",
+        "oecdEconomicOutlook": "OECD Economic Outlook",
+        "roadNetwork": "Road Network",
+        "climateEnvironment": "Climate & Environment",
+        "humanitarianUpdates": "Humanitarian Updates",
+        "populationPyramid": "Population Pyramid"
+    }
+  }
+}
