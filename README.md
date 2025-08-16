@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TheGovNews - Government News Aggregator
 
 Bu proje, resmi hükümet haber kaynakları için akıllı bir toplayıcıdır. İçeriği otomatik olarak alır, işler ve zenginleştirerek kullanıcılara güvenilir, aranabilir ve filtrelenebilir bir kamu bilgisi akışı sağlar.
@@ -21,3 +22,7 @@ Sadece bir HTTP sunucusu ile projenin kök dizinini sunmanız yeterlidir.
 python3 -m http.server
 ```
 Ardından tarayıcınızda `http://localhost:8000` adresine gidin.
+=======
+# devlet
+devlet
+>>>>>>> 4a32146b06635da6c925278737d3817bcbbf4531
