@@ -159,3 +159,36 @@ export const generateMockData = (): { articles: Article[], sources: Source[], to
 
   return { articles, sources: MOCK_SOURCES, topics: MOCK_TOPICS.sort() };
 };
+
+// Mock function to fetch national press data for a country
+export const fetchNationalPress = async (countryCode: string): Promise<any[]> => {
+  // Simulate API call delay
+  await new Promise(resolve => setTimeout(resolve, 500));
+  
+  // Return mock data based on country code
+  const mockPressData = [
+    {
+      title: `${countryCode} National News Agency`,
+      url: `https://news.${countryCode.toLowerCase()}.gov`,
+      description: `Official news agency of ${countryCode}`,
+      language: 'en',
+      type: 'government'
+    },
+    {
+      title: `${countryCode} Daily News`,
+      url: `https://daily.${countryCode.toLowerCase()}.news`,
+      description: `Leading newspaper in ${countryCode}`,
+      language: 'en',
+      type: 'newspaper'
+    },
+    {
+      title: `${countryCode} Public Broadcasting`,
+      url: `https://media.${countryCode.toLowerCase()}.tv`,
+      description: `Public broadcasting service of ${countryCode}`,
+      language: 'en',
+      type: 'broadcast'
+    }
+  ];
+  
+  return mockPressData;
+};

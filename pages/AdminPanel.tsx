@@ -50,20 +50,23 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ setView, countryMappings }) => 
     };
 
     return (
-        <div className="min-h-screen bg-slate-100 dark:bg-slate-950 text-slate-800 dark:text-slate-200">
+        <div className="min-h-screen bg-gradient-to-br from-slate-50 to-slate-100 dark:from-slate-950 dark:to-slate-900">
             {/* Header */}
             <header className="bg-white/80 dark:bg-slate-900/80 border-b border-slate-200 dark:border-slate-800 sticky top-0 z-30 backdrop-blur-md">
                 <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
                         <div className="flex items-center gap-4">
-                            <ShieldCheckIcon className="h-8 w-8 text-blue-600" />
-                            <h1 className="text-xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
+                            <ShieldCheckIcon className="h-8 w-8 text-blue-600 dark:text-blue-400" />
+                            <h1 className="text-2xl font-bold text-slate-900 dark:text-slate-100 tracking-tight">
                                 Admin Panel
                             </h1>
                         </div>
-                        <button onClick={() => setView({ name: 'landing' })} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 dark:bg-slate-800 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-                            <ArrowLeftIcon className="h-5 w-5 text-slate-500 dark:text-slate-400" />
-                            <span className="font-semibold text-sm text-slate-700 dark:text-slate-200">Back to Map</span>
+                        <button 
+                            onClick={() => setView({ name: 'landing' })} 
+                            className="flex items-center gap-2 px-4 py-2 rounded-lg bg-modern-surface/50 hover:bg-gradient-to-br hover:from-modern-primary/20 hover:to-modern-secondary/20 border border-modern-border/30 text-modern-text-secondary hover:text-modern-text-primary transition-all duration-300 hover:scale-105 shadow-modern"
+                        >
+                            <ArrowLeftIcon className="h-5 w-5" />
+                            <span className="font-semibold text-sm">Back to Map</span>
                         </button>
                     </div>
                 </div>

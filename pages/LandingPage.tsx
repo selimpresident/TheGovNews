@@ -1,4 +1,4 @@
-import React, { useMemo, useState, KeyboardEvent, useRef, useEffect } from 'react';
+import React, { useMemo, useState, KeyboardEvent, useRef, useEffect, useCallback } from 'react';
 import {
   ComposableMap,
   Geographies,
@@ -49,7 +49,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
   const profileMenuRef = useRef<HTMLDivElement>(null);
 
 
-  const handleMoveEnd = (pos: { coordinates: [number, number]; zoom: number }) => {
+  const handleMoveEnd = useCallback((pos: { coordinates: [number, number]; zoom: number }) => {
     const { zoom } = pos;
     let [lon, lat] = pos.coordinates;
 
@@ -60,7 +60,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     lat = Math.max(20 - maxLatDeviation, Math.min(lat, 20 + maxLatDeviation));
 
     setPosition({ coordinates: [lon, lat], zoom });
-  };
+  }, []);
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -84,13 +84,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
         opacity: Math.random() * 0.5 + 0.2,
       },
     }));
-  }, []);
+  }, []); // Empty dependency array ensures stars are only generated once
 
   const getCountryName = (geo: any): string | undefined => {
     return geo.properties.name || geo.properties.NAME || geo.properties.NAME_LONG;
   };
 
-  const handleCountryClick = (geo: any) => {
+  const handleCountryClick = useCallback((geo: any) => {
     const geoName = getCountryName(geo);
     if (!geoName) return;
 
@@ -100,7 +100,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     if (turkishName && countryMappings.allCountries.some(c => c.name === turkishName)) {
       setView({ name: 'country', context: { countryName: turkishName } });
     }
-  };
+  }, [countryMappings, setView]);
 
   const handleSearch = async () => {
     if (!searchQuery.trim()) return;
@@ -136,19 +136,19 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     if (isAuthenticated && currentUser) {
       return (
         <div className="relative" ref={profileMenuRef}>
-          <button onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)} className="h-10 flex items-center gap-2 px-3 rounded-lg bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
-            <UserCircleIcon className="w-6 h-6 text-slate-600 dark:text-slate-300" />
-            <span className="text-sm font-medium text-slate-800 dark:text-slate-200 truncate max-w-[100px]">{currentUser.name}</span>
-            <ChevronDownIcon className={`w-4 h-4 text-slate-500 dark:text-slate-400 transition-transform ${isProfileMenuOpen ? 'rotate-180' : ''}`} />
+          <button onClick={() => setIsProfileMenuOpen(!isProfileMenuOpen)} className="h-7 sm:h-8 flex items-center gap-1 px-2 rounded bg-slate-100/80 dark:bg-slate-800/80 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors">
+            <UserCircleIcon className="w-4 h-4 text-slate-600 dark:text-slate-300" />
+            <span className="text-xs font-medium text-slate-800 dark:text-slate-200 truncate max-w-[60px] hidden sm:block">{currentUser.name}</span>
+            <ChevronDownIcon className={`w-3 h-3 text-slate-500 dark:text-slate-400 transition-transform ${isProfileMenuOpen ? 'rotate-180' : ''}`} />
           </button>
           {isProfileMenuOpen && (
-            <div className="absolute top-full right-0 mt-2 w-48 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 z-50">
+            <div className="absolute top-full right-0 mt-1 w-40 bg-white dark:bg-slate-800 rounded-lg shadow-lg border border-slate-200 dark:border-slate-700 z-50">
               <div className="p-2 border-b border-slate-200 dark:border-slate-700">
-                <p className="text-sm font-semibold text-slate-800 dark:text-slate-200 truncate">{currentUser.name}</p>
+                <p className="text-xs font-semibold text-slate-800 dark:text-slate-200 truncate">{currentUser.name}</p>
                 <p className="text-xs text-slate-500 dark:text-slate-400 truncate">{currentUser.email}</p>
               </div>
               <div className="p-1">
-                <button onClick={logout} className="w-full text-left px-3 py-2 rounded-md text-sm text-red-600 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10">
+                <button onClick={logout} className="w-full text-left px-2 py-1.5 rounded text-xs text-red-600 dark:text-red-500 hover:bg-red-50 dark:hover:bg-red-500/10">
                   Logout
                 </button>
               </div>
@@ -160,15 +160,16 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     return (
       <button 
         onClick={onLoginClick} 
-        className="h-10 px-4 flex items-center rounded-lg bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-sm font-medium transition-all duration-200 hover:scale-[1.05] hover:shadow-md"
+        className="h-7 sm:h-8 px-2 flex items-center rounded bg-slate-100 dark:bg-slate-800 border border-slate-300 dark:border-slate-700 text-slate-800 dark:text-slate-100 text-xs font-medium transition-all duration-200 hover:scale-105"
       >
-        Login / Register
+        <UserCircleIcon className="w-3 h-3 sm:mr-1" />
+        <span className="hidden sm:inline">Login</span>
       </button>
     );
   };
 
   return (
-    <div className="h-full w-full font-sans relative flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300">
+    <div className="h-screen w-full font-sans relative flex flex-col bg-slate-50 dark:bg-slate-900 text-slate-800 dark:text-slate-300 overflow-hidden">
        <OrganizationsPanel
         isOpen={isOrgPanelOpen}
         onClose={() => setIsOrgPanelOpen(false)}
@@ -205,27 +206,27 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
 
 
       {/* Content container */}
-      <div className="relative z-10 flex flex-col h-screen bg-transparent overflow-hidden">
-        <header className="sticky top-0 z-30 h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-300/20 dark:border-slate-700/50">
-          <div className="max-w-screen-2xl mx-auto px-6 flex items-center justify-between h-full">
+      <div className="relative z-10 flex flex-col h-full bg-transparent">
+        <header className="flex-shrink-0 z-30 h-12 sm:h-14 md:h-16 bg-white/80 dark:bg-slate-900/80 backdrop-blur-lg border-b border-slate-300/20 dark:border-slate-700/50">
+          <div className="max-w-screen-2xl mx-auto px-2 sm:px-4 lg:px-6 flex items-center justify-between h-full">
               {/* Left Section */}
-              <div className="flex items-center gap-3">
-                  <GlobeAltIcon className="h-7 w-7 text-slate-800 dark:text-slate-200" />
-                  <span className="text-xl font-medium text-slate-900 dark:text-slate-100">
+              <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
+                  <GlobeAltIcon className="h-5 w-5 sm:h-6 sm:w-6 text-slate-800 dark:text-slate-200" />
+                  <span className="text-sm sm:text-base lg:text-lg font-medium text-slate-900 dark:text-slate-100 hidden sm:block">
                       GovNews Global
                   </span>
               </div>
 
-              {/* Center Section */}
-              <div className="flex-grow flex justify-center px-8">
-                  <div className="relative w-full max-w-xl group">
-                      <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                          <SearchIcon className="w-5 h-5 text-slate-400 dark:text-slate-500" />
+              {/* Center Section - Compact search */}
+              <div className="hidden lg:flex flex-grow justify-center px-2">
+                  <div className="relative w-full max-w-md group">
+                      <div className="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                          <SearchIcon className="w-4 h-4 text-slate-400 dark:text-slate-500" />
                       </div>
                       <input
                           type="text"
-                          placeholder="Search government news globally…"
-                          className="w-full h-10 bg-white/60 dark:bg-slate-800/60 border border-slate-300/50 dark:border-slate-700/50 rounded-full pl-11 pr-4 text-slate-900 dark:text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-blue-500/60 focus:border-transparent transition-shadow duration-300 shadow-md dark:shadow-black/20 hover:shadow-lg"
+                          placeholder="Search globally…"
+                          className="w-full h-8 bg-white/60 dark:bg-slate-800/60 border border-slate-300/50 dark:border-slate-700/50 rounded-full pl-9 pr-3 text-sm text-slate-900 dark:text-slate-100 placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-blue-500/60 transition-shadow duration-300"
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           onKeyDown={handleSearchKeyDown}
@@ -234,34 +235,43 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
                   </div>
               </div>
 
-              {/* Right Section */}
-              <div className="flex items-center gap-4">
+              {/* Right Section - Compact buttons */}
+              <div className="flex items-center gap-1">
                    <button 
                       onClick={() => setIsOrgPanelOpen(true)}
-                      className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg"
+                      className="h-7 sm:h-8 px-1.5 sm:px-2 flex items-center gap-1 rounded text-xs font-medium text-white transition-all duration-200 hover:scale-105"
                       style={{ backgroundColor: '#34C759' }}
                       title={'Organizations'}
                   >
-                      <BuildingLibraryIcon className="h-5 w-5" />
-                      <span className="hidden lg:inline">Organizations</span>
+                      <BuildingLibraryIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="hidden xl:inline text-xs">Orgs</span>
                   </button>
                   <button 
                       onClick={() => setView({ name: 'compare' })}
-                      className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg"
+                      className="h-7 sm:h-8 px-1.5 sm:px-2 flex items-center gap-1 rounded text-xs font-medium text-white transition-all duration-200 hover:scale-105"
                       style={{ backgroundColor: '#FF9500' }}
                       title={'Compare'}
                   >
-                      <ArrowsRightLeftIcon className="h-5 w-5" />
-                      <span className="hidden lg:inline">Compare</span>
+                      <ArrowsRightLeftIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="hidden xl:inline text-xs">Compare</span>
                   </button>
                   <button 
                       onClick={() => setIsModalOpen(true)}
-                      className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg"
+                      className="h-7 sm:h-8 px-1.5 sm:px-2 flex items-center gap-1 rounded text-xs font-medium text-white transition-all duration-200 hover:scale-105"
                       style={{ backgroundColor: '#0A84FF' }}
                       title={'Search Countries'}
                   >
-                      <SearchIcon className="h-5 w-5" />
-                      <span className="hidden md:inline">Search Countries</span>
+                      <SearchIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="hidden lg:inline text-xs">Countries</span>
+                  </button>
+                  <button 
+                      onClick={() => setView({ name: 'new-country' })}
+                      className="h-7 sm:h-8 px-1.5 sm:px-2 flex items-center gap-1 rounded text-xs font-medium text-white transition-all duration-200 hover:scale-105"
+                      style={{ backgroundColor: '#5856D6' }}
+                      title={'New Design'}
+                  >
+                      <BeakerIcon className="h-3 w-3 sm:h-4 sm:w-4" />
+                      <span className="hidden lg:inline text-xs">New UI</span>
                   </button>
                   <AuthControls />
                   <ThemeToggleButton />
@@ -269,14 +279,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
           </div>
         </header>
         
-        <main className="flex-1 relative">
+        <main className="flex-1 relative overflow-hidden">
           <Tooltip id="map-tooltip" className="!bg-white dark:!bg-slate-900 !text-slate-800 dark:!text-slate-200 rounded-md shadow-lg !border !border-slate-200 dark:!border-slate-700 z-20" />
           <ComposableMap
             projectionConfig={{
               rotate: [0, 0, 0],
               scale: 140
             }}
-            className="w-full"
+            className="w-full h-full"
             style={{
                 width: "100%",
                 height: "100%",
@@ -309,8 +319,8 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
               }}
             >
               <Geographies geography={geoUrl}>
-                {({ geographies }) =>
-                  geographies.map(geo => {
+                {({ geographies }: { geographies: Array<any> }) =>
+                  geographies.map((geo: any) => {
                     const geoName = getCountryName(geo);
                     const normalizedGeoName = (geoName || '').trim().toLowerCase();
                     const turkishName = countryMappings.geoJsonNameToTurkish.get(normalizedGeoName);
@@ -372,14 +382,14 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
           </ComposableMap>
         </main>
 
-        <footer className="w-full text-center py-4 border-t border-slate-700/50 dark:border-slate-800 bg-slate-900/50 dark:bg-black/20 backdrop-blur-sm flex-shrink-0 flex justify-center items-center gap-6">
-          <p className="text-slate-400 text-xs tracking-wider uppercase">GovNews Global</p>
+        <footer className="w-full text-center py-2 border-t border-slate-700/50 dark:border-slate-800 bg-slate-900/50 dark:bg-black/20 backdrop-blur-sm flex-shrink-0 flex justify-center items-center gap-4">
+          <p className="text-slate-400 text-xs">GovNews Global</p>
           {isAuthenticated && (
             <>
               <span className="text-slate-700 dark:text-slate-700">•</span>
-              <button onClick={() => setView({ name: 'admin' })} className="text-slate-400 text-xs tracking-wider uppercase hover:text-slate-200 dark:hover:text-slate-300 transition-colors flex items-center gap-1.5">
+              <button onClick={() => setView({ name: 'admin' })} className="text-slate-400 text-xs hover:text-slate-200 dark:hover:text-slate-300 transition-colors flex items-center gap-1">
                  <ShieldCheckIcon className="h-3 w-3" />
-                 Admin Panel
+                 Admin
               </button>
             </>
           )}
@@ -398,7 +408,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
         onClose={() => setIsModalOpen(false)}
         onSelectCountry={(country) => {
             setIsModalOpen(false);
-            setView({ name: 'country', context: { countryName: country } });
+            // Use the new design
+            setView({ name: 'new-country', context: { countryName: country } });
+            // setView({ name: 'country', context: { countryName: country } });
         }}
         countries={countryMappings.allCountries}
         countryMappings={countryMappings}

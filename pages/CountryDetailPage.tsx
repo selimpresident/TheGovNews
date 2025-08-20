@@ -631,7 +631,7 @@ const CountryDetailPage: React.FC<CountryDetailPageProps> = ({
   const coordinates = countryMappings.turkishToLatLng.get(countryName);
 
   return (
-    <div className={`relative ${isEmbedded ? 'h-full' : 'min-h-screen'}`}>
+    <div className={`relative ${isEmbedded ? 'h-full' : 'h-screen overflow-hidden'}`}>
        <style>{`
         @keyframes kenburns {
           0% {
@@ -672,31 +672,37 @@ const CountryDetailPage: React.FC<CountryDetailPageProps> = ({
       
       {!isEmbedded && <Header onNavigateBack={() => setView({ name: 'landing' })} activeCategory={activeCategory} onSetCategory={handleSetCategory} />}
       
-      <div className={`max-w-screen-xl mx-auto p-4 ${isEmbedded ? 'pt-0' : ''}`}>
+      <div className={`flex flex-col h-full ${isEmbedded ? '' : 'max-h-screen'}`}>
         {!isEmbedded && (
-            <MiniDashboard 
-                population={dashboardData.population}
-                gdp={dashboardData.gdp}
-                latestEventDate={dashboardData.latestEventDate}
-            />
-        )}
-        <div className="grid grid-cols-12 gap-8 items-start">
-            <div className="col-span-12 md:col-span-4 lg:col-span-3">
-            <MinistrySidebar
-                countryName={countryName}
-                englishCountryName={englishCountryName}
-                countryMappings={countryMappings}
-                ministries={countryData.ministriesForCountry}
-                activeCategory={activeCategory}
-                activeSelection={activeSelection}
-                onSelect={handleSelect}
-                bookmarkCount={countryData.bookmarkedArticles.length}
-                setView={setView}
-            />
+            <div className="flex-shrink-0 px-2 sm:px-3 py-2">
+                <MiniDashboard 
+                    population={dashboardData.population}
+                    gdp={dashboardData.gdp}
+                    latestEventDate={dashboardData.latestEventDate}
+                />
             </div>
-            <main className="col-span-12 md:col-span-8 lg:col-span-9 bg-white/70 dark:bg-slate-800/80 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 rounded-lg shadow-2xl overflow-hidden min-h-[calc(100vh-20rem)]">
-                {!isEmbedded && activeCategory === 'official' && <Timeline articles={countryData.articlesForCountry} onArticleSelect={handleSelectArticle} />}
-                <div key={activeSelection} className="animate-content-fade-in h-full">
+        )}
+        <div className="flex-1 flex gap-2 sm:gap-3 px-2 sm:px-3 pb-2 overflow-hidden">
+            <div className="w-64 sm:w-72 lg:w-80 flex-shrink-0">
+                <MinistrySidebar
+                    countryName={countryName}
+                    englishCountryName={englishCountryName}
+                    countryMappings={countryMappings}
+                    ministries={countryData.ministriesForCountry}
+                    activeCategory={activeCategory}
+                    activeSelection={activeSelection}
+                    onSelect={handleSelect}
+                    bookmarkCount={countryData.bookmarkedArticles.length}
+                    setView={setView}
+                />
+            </div>
+            <main className="flex-1 bg-white/70 dark:bg-slate-800/80 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 rounded-lg shadow-lg overflow-hidden flex flex-col">
+                {!isEmbedded && activeCategory === 'official' && (
+                    <div className="flex-shrink-0">
+                        <Timeline articles={countryData.articlesForCountry} onArticleSelect={handleSelectArticle} />
+                    </div>
+                )}
+                <div key={activeSelection} className="animate-content-fade-in flex-1 overflow-hidden">
                     {renderMainContent()}
                 </div>
             </main>

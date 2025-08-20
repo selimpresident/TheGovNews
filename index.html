@@ -20,7 +20,7 @@
     </script>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
     <meta name="theme-color" content="#0A84FF" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
@@ -37,9 +37,66 @@
         theme: {
           extend: {
             fontFamily: {
-              sans: ['SF Pro Display', 'Inter', 'sans-serif'],
+              sans: ['SF Pro Display', 'Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+              display: ['SF Pro Display', 'Inter', 'system-ui', 'sans-serif'],
+              mono: ['SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'monospace'],
+            },
+            fontSize: {
+              'xs': ['0.75rem', { lineHeight: '1rem', letterSpacing: '0.025em' }],
+              'sm': ['0.875rem', { lineHeight: '1.25rem', letterSpacing: '0.025em' }],
+              'base': ['1rem', { lineHeight: '1.5rem', letterSpacing: '0' }],
+              'lg': ['1.125rem', { lineHeight: '1.75rem', letterSpacing: '-0.025em' }],
+              'xl': ['1.25rem', { lineHeight: '1.75rem', letterSpacing: '-0.025em' }],
+              '2xl': ['1.5rem', { lineHeight: '2rem', letterSpacing: '-0.025em' }],
+              '3xl': ['1.875rem', { lineHeight: '2.25rem', letterSpacing: '-0.025em' }],
+              '4xl': ['2.25rem', { lineHeight: '2.5rem', letterSpacing: '-0.025em' }],
+              '5xl': ['3rem', { lineHeight: '1', letterSpacing: '-0.025em' }],
+              '6xl': ['3.75rem', { lineHeight: '1', letterSpacing: '-0.025em' }],
+            },
+            spacing: {
+              '18': '4.5rem',
+              '88': '22rem',
+              '128': '32rem',
+              '144': '36rem',
             },
             colors: {
+              // Modern Dark Theme - Deep Space Inspired
+              'modern-dark': '#0A0B0F',
+              'modern-darker': '#060709',
+              'modern-surface': '#141620',
+              'modern-surface-hover': '#1A1D2B',
+              'modern-surface-active': '#202436',
+              'modern-border': '#2A2F42',
+              'modern-border-light': '#363B54',
+              
+              // Modern Light Theme - Clean Minimalist
+              'modern-light': '#FAFBFC',
+              'modern-lighter': '#FFFFFF',
+              'modern-surface-light': '#F8F9FA',
+              'modern-surface-light-hover': '#F1F3F4',
+              'modern-surface-light-active': '#E8EAED',
+              'modern-border-light-theme': '#E1E5E9',
+              'modern-border-light-subtle': '#F0F2F5',
+              
+              // Modern Accent Colors - Vibrant & Professional
+              'modern-primary': '#6366F1', // Indigo
+              'modern-primary-light': '#818CF8',
+              'modern-primary-dark': '#4F46E5',
+              'modern-secondary': '#8B5CF6', // Purple
+              'modern-success': '#10B981', // Emerald
+              'modern-warning': '#F59E0B', // Amber
+              'modern-error': '#EF4444', // Red
+              'modern-info': '#06B6D4', // Cyan
+              
+              // Modern Text Colors
+              'modern-text-primary': '#F9FAFB',
+              'modern-text-secondary': '#D1D5DB',
+              'modern-text-tertiary': '#9CA3AF',
+              'modern-text-primary-light': '#111827',
+              'modern-text-secondary-light': '#374151',
+              'modern-text-tertiary-light': '#6B7280',
+              
+              // Legacy colors for backward compatibility
               'analyst-dark-bg': '#171924',
               'analyst-sidebar': '#202330',
               'analyst-input': '#2a2e3f',
@@ -61,17 +118,99 @@
               'xl': '1280px',
               '2xl': '1536px',
             },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out',
+              'slide-up': 'slideUp 0.4s ease-out',
+              'scale-in': 'scaleIn 0.3s ease-out',
+              'glow': 'glow 2s ease-in-out infinite alternate',
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: '0' },
+                '100%': { opacity: '1' },
+              },
+              slideUp: {
+                '0%': { opacity: '0', transform: 'translateY(20px)' },
+                '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: '0', transform: 'scale(0.9)' },
+                '100%': { opacity: '1', transform: 'scale(1)' },
+              },
+              glow: {
+                '0%': { boxShadow: '0 0 5px rgba(99, 102, 241, 0.5)' },
+                '100%': { boxShadow: '0 0 20px rgba(99, 102, 241, 0.8)' },
+              },
+            },
+            boxShadow: {
+              'modern': '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)',
+              'modern-lg': '0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
+              'modern-glow': '0 0 20px rgba(99, 102, 241, 0.3)',
+            },
           },
         },
       }
     </script>
     <style>
+      /* Modern CSS Reset and Base Styles */
+      *, *::before, *::after {
+        box-sizing: border-box;
+      }
+      
+      html {
+        line-height: 1.5;
+        -webkit-text-size-adjust: 100%;
+        -moz-tab-size: 4;
+        tab-size: 4;
+        font-feature-settings: normal;
+        font-variation-settings: normal;
+        -webkit-tap-highlight-color: transparent;
+      }
+      
+      body {
+        margin: 0;
+        line-height: inherit;
+        font-family: 'SF Pro Display', 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-feature-settings: 'kern' 1, 'liga' 1, 'calt' 1;
+        text-rendering: optimizeLegibility;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+      }
+      
       /* Safe area insets handling */
       :root {
         --sat: env(safe-area-inset-top, 0px);
         --sar: env(safe-area-inset-right, 0px);
         --sab: env(safe-area-inset-bottom, 0px);
         --sal: env(safe-area-inset-left, 0px);
+        
+        /* Modern spacing scale */
+        --spacing-xs: 0.25rem;
+        --spacing-sm: 0.5rem;
+        --spacing-md: 1rem;
+        --spacing-lg: 1.5rem;
+        --spacing-xl: 2rem;
+        --spacing-2xl: 3rem;
+        --spacing-3xl: 4rem;
+        
+        /* Modern typography scale */
+        --text-xs: 0.75rem;
+        --text-sm: 0.875rem;
+        --text-base: 1rem;
+        --text-lg: 1.125rem;
+        --text-xl: 1.25rem;
+        --text-2xl: 1.5rem;
+        --text-3xl: 1.875rem;
+        
+        /* Modern line heights */
+        --leading-tight: 1.25;
+        --leading-normal: 1.5;
+        --leading-relaxed: 1.625;
+        
+        /* Modern letter spacing */
+        --tracking-tight: -0.025em;
+        --tracking-normal: 0em;
+        --tracking-wide: 0.025em;
       }
       
       .safe-area-top {
@@ -90,42 +229,76 @@
         padding-left: var(--sal);
       }
       
-      /* Improved touch targets */
+      /* Improved touch targets for mobile */
       button, a, input, select, textarea {
         min-height: 44px;
         min-width: 44px;
       }
       
-      /* Focus styles for accessibility */
+      /* Modern focus styles for accessibility */
       :focus-visible {
-        outline: 2px solid #0A84FF;
+        outline: 2px solid #6366F1;
         outline-offset: 2px;
+        border-radius: 4px;
       }
-    </style>
-    <style>
-      /* For Webkit-based browsers (Chrome, Safari, Edge) */
+      
+      /* Smooth scrolling */
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      /* Modern button reset */
+      button {
+        background: none;
+        border: none;
+        padding: 0;
+        font: inherit;
+        cursor: pointer;
+        outline: inherit;
+      }
+      
+      /* Modern input styles */
+      input, textarea, select {
+        font: inherit;
+        color: inherit;
+      }
+      
+      /* Improved text selection */
+      ::selection {
+        background-color: rgba(99, 102, 241, 0.2);
+        color: inherit;
+      }
+      
+      /* Modern scrollbar for webkit browsers */
       ::-webkit-scrollbar {
         width: 8px;
         height: 8px;
       }
+      
       ::-webkit-scrollbar-track {
         background: transparent;
       }
+      
       ::-webkit-scrollbar-thumb {
-        background-color: #e2e8f0; /* slate-200 */
-        border-radius: 20px;
+        background-color: rgba(0, 0, 0, 0.2);
+        border-radius: 4px;
         border: 2px solid transparent;
         background-clip: content-box;
       }
+      
       html.dark ::-webkit-scrollbar-thumb {
-         background-color: #2f344a; /* analyst-border */
+        background-color: rgba(255, 255, 255, 0.2);
       }
+      
       ::-webkit-scrollbar-thumb:hover {
-         background-color: #cbd5e1; /* slate-300 */
+        background-color: rgba(0, 0, 0, 0.3);
       }
-       html.dark ::-webkit-scrollbar-thumb:hover {
-         background-color: #3a3f57; /* analyst-item-active */
+      
+      html.dark ::-webkit-scrollbar-thumb:hover {
+        background-color: rgba(255, 255, 255, 0.3);
       }
+    </style>
+    <style>
       #root {
         position: relative;
         z-index: 1;

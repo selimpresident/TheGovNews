@@ -50,20 +50,22 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ setView, countryMappings }) => 
     };
 
     return (
-        <div className="min-h-screen bg-slate-100 dark:bg-analyst-dark-bg text-slate-800 dark:text-slate-200">
+        <div className="min-h-screen bg-gradient-to-br from-modern-light to-modern-surface-light dark:from-modern-dark dark:to-modern-darker text-modern-text-primary-light dark:text-modern-text-primary transition-all duration-300">
             {/* Header */}
-            <header className="bg-white/80 dark:bg-analyst-sidebar/80 border-b border-slate-200 dark:border-analyst-border sticky top-0 z-30 backdrop-blur-md">
+            <header className="bg-modern-lighter/90 dark:bg-modern-surface/90 border-b border-modern-border-light-theme/30 dark:border-modern-border/50 sticky top-0 z-30 backdrop-blur-xl shadow-modern transition-all duration-300">
                 <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex items-center justify-between h-16">
-                        <div className="flex items-center gap-4">
-                            <ShieldCheckIcon className="h-8 w-8 text-analyst-accent" />
-                            <h1 className="text-xl font-bold text-slate-900 dark:text-analyst-text-primary tracking-tight">
+                        <div className="flex items-center gap-4 group">
+                            <div className="p-2 rounded-xl bg-gradient-to-br from-modern-primary to-modern-secondary shadow-modern-lg group-hover:shadow-modern-glow transition-all duration-300">
+                                <ShieldCheckIcon className="h-6 w-6 text-white" />
+                            </div>
+                            <h1 className="text-xl font-bold bg-gradient-to-r from-modern-primary to-modern-secondary bg-clip-text text-transparent tracking-tight">
                                 Admin Panel
                             </h1>
                         </div>
-                        <button onClick={() => setView({ name: 'landing' })} className="flex items-center gap-2 px-3 py-2 rounded-lg bg-slate-100 dark:bg-analyst-input hover:bg-slate-200 dark:hover:bg-analyst-item-hover transition-colors">
-                            <ArrowLeftIcon className="h-5 w-5 text-slate-500 dark:text-analyst-text-secondary" />
-                            <span className="font-semibold text-sm text-slate-700 dark:text-analyst-text-primary">Back to Map</span>
+                        <button onClick={() => setView({ name: 'landing' })} className="flex items-center gap-2 px-4 py-2 rounded-xl bg-gradient-to-r from-modern-primary to-modern-secondary text-white hover:scale-105 hover:shadow-modern-glow transition-all duration-300 shadow-modern">
+                            <ArrowLeftIcon className="h-4 w-4" />
+                            <span className="font-semibold text-sm">Back to Map</span>
                         </button>
                     </div>
                 </div>
@@ -77,13 +79,13 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ setView, countryMappings }) => 
                             <button
                                 key={item.id}
                                 onClick={() => setActiveView(item.id as AdminView)}
-                                className={`w-full flex items-center gap-3 px-4 py-2.5 rounded-lg text-sm font-medium text-left transition-colors ${
+                                className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium text-left transition-all duration-300 ${
                                     activeView === item.id
-                                        ? 'bg-analyst-accent text-white shadow'
-                                        : 'text-slate-600 dark:text-analyst-text-secondary hover:bg-slate-200/60 dark:hover:bg-analyst-item-hover'
+                                        ? 'bg-gradient-to-r from-modern-primary to-modern-secondary text-white shadow-modern-lg scale-105'
+                                        : 'text-modern-text-secondary-light dark:text-modern-text-secondary hover:bg-modern-surface-light/50 dark:hover:bg-modern-surface/50 hover:scale-102'
                                 }`}
                             >
-                                {React.cloneElement(item.icon, { className: `h-5 w-5 ${activeView === item.id ? 'text-white' : 'text-slate-500 dark:text-analyst-text-secondary'}` })}
+                                {React.cloneElement(item.icon, { className: `h-5 w-5 ${activeView === item.id ? 'text-white' : 'text-modern-text-secondary-light dark:text-modern-text-secondary'}` })}
                                 <span>{item.name}</span>
                             </button>
                         ))}
@@ -91,7 +93,7 @@ const AdminPanel: React.FC<AdminPanelProps> = ({ setView, countryMappings }) => 
                 </aside>
                 
                 {/* Main Content */}
-                <main className="flex-1 bg-white dark:bg-analyst-sidebar rounded-xl border border-slate-200 dark:border-analyst-border shadow-sm overflow-hidden min-h-[calc(100vh-10rem)]">
+                <main className="flex-1 bg-modern-lighter/80 dark:bg-modern-surface/80 rounded-2xl border border-modern-border-light-theme/30 dark:border-modern-border/50 shadow-modern-lg backdrop-blur-xl overflow-hidden min-h-[calc(100vh-10rem)] transition-all duration-300">
                     {renderContent()}
                 </main>
             </div>

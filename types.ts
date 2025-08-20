@@ -129,8 +129,12 @@ export interface ExternalArticle {
   summary: string;
 }
 
+export interface FactbookSection {
+  [key: string]: string;
+}
+
 export interface FactbookProfile {
-  [section_title: string]: { [key:string]: string };
+  [section_title: string]: FactbookSection;
 }
 
 export interface FactbookData {

@@ -3,6 +3,7 @@ import { ExternalArticle, AiSearchResult, GroundingChunk, AiAnalysisResult } fro
 import { newsSourcesData } from '../data/newsSources';
 import { CountryMappings } from './countryDataService';
 import { getFromCache, setInCache } from '../utils/cache';
+import { environmentConfig } from './environmentConfig';
 
 export async function fetchNationalPress(countryName: string, countryMappings: CountryMappings): Promise<ExternalArticle[]> {
     const lang = 'en';
@@ -19,7 +20,8 @@ export async function fetchNationalPress(countryName: string, countryMappings: C
     }
 
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const config = environmentConfig.getConfig();
+        const ai = new GoogleGenAI({ apiKey: config.geminiApiKey });
         const sourceNames = sourcesForCountry.map(s => s.name).join(', ');
         const englishCountryName = countryMappings.turkishToEnglish.get(countryName) || countryName;
         const prompt = `Find the 5 most recent and important news articles about ${englishCountryName} from any of the following news sources: ${sourceNames}. Only use these sources. For each article, provide the title, the direct URL to the article, the source name, the publication date in YYYY-MM-DD format, and a one or two-sentence summary. The news should be as recent as possible. Respond in English.`;
@@ -77,7 +79,8 @@ export async function summarizeArticle(articleBody: string): Promise<string> {
     }
 
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const config = environmentConfig.getConfig();
+        const ai = new GoogleGenAI({ apiKey: config.geminiApiKey });
         const prompt = `Please provide a concise but comprehensive summary of the following news article. Structure the summary into 2-3 distinct paragraphs, covering the main points, the context, and any stated outcomes or implications. The tone should be neutral and informative, suitable for an intelligence briefing. Respond in English. Article:\n\n"${articleBody}"`;
 
         const response = await ai.models.generateContent({
@@ -104,7 +107,8 @@ export async function performAiSearch(query: string): Promise<AiSearchResult> {
     }
     
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const config = environmentConfig.getConfig();
+        const ai = new GoogleGenAI({ apiKey: config.geminiApiKey });
         const response: GenerateContentResponse = await ai.models.generateContent({
             model: 'gemini-2.5-flash',
             contents: `${query}. Please answer in English.`,
@@ -128,7 +132,8 @@ export async function performAiSearch(query: string): Promise<AiSearchResult> {
 }
 
 export function createChatSession(systemInstruction: string): Chat {
-    const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+    const config = environmentConfig.getConfig();
+    const ai = new GoogleGenAI({ apiKey: config.geminiApiKey });
     const chat: Chat = ai.chats.create({
         model: 'gemini-2.5-flash',
         config: {
@@ -178,7 +183,8 @@ export async function analyzeTextSentimentAndTopics(articleBody: string): Promis
     }
 
     try {
-        const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+        const config = environmentConfig.getConfig();
+        const ai = new GoogleGenAI({ apiKey: config.geminiApiKey });
         const prompt = `Analyze the sentiment of the following news article. Provide a sentiment label ('Positive', 'Neutral', or 'Negative'), a sentiment score from 0.0 (very negative) to 1.0 (very positive) where 0.5 is neutral, and a list of up to 5 relevant topics as an array of strings. Respond in English. Article:\n\n"${articleBody}"`;
 
         const responseSchema = {

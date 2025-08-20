@@ -27,12 +27,12 @@ interface DataSourceItem {
 const getSourceIcon = (sourceName: string) => {
     const lowerName = sourceName.toLowerCase();
     if (lowerName.includes('bakanlığı') || lowerName.includes('ministry') || lowerName.includes('department') || lowerName.includes('departmanı') || lowerName.includes('sekreterliği') || lowerName.includes('komisyonu')) {
-        return <BuildingOfficeIcon className="h-5 w-5 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
+        return <BuildingOfficeIcon className="h-4 w-4 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
     }
     if (lowerName.includes('cumhurbaşkanlığı') || lowerName.includes('president') || lowerName.includes('başkanlık') || lowerName.includes('white house') || lowerName.includes('kremlin') || lowerName.includes('ofisi')) {
-        return <UsersIcon className="h-5 w-5 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
+        return <UsersIcon className="h-4 w-4 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
     }
-    return <Bars3Icon className="h-5 w-5 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
+    return <Bars3Icon className="h-4 w-4 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />;
 }
 
 const formatMinistryKey = (key: string): string => {
@@ -42,25 +42,25 @@ const formatMinistryKey = (key: string): string => {
     .replace(/^./, (str) => str.toUpperCase());
 };
 
-const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishCountryName, ministries, activeSelection, onSelect, bookmarkCount, countryMappings, activeCategory, setView }) => {
+const MinistrySidebar: React.FC<MinistrySidebarProps> = React.memo(({ countryName, englishCountryName, ministries, activeSelection, onSelect, bookmarkCount, countryMappings, activeCategory, setView }) => {
   const legislativeInfo = countryMappings.turkishToLegislativeInfo.get(countryName);
   const flagUrl = countryMappings.turkishToFlagUrl.get(countryName);
 
   const dataSources: { intelligence: DataSourceItem[]; data: DataSourceItem[] } = {
     intelligence: [
-        { id: 'socialMedia', name: 'Social Media Feed', icon: <ChatBubbleLeftRightIcon className="h-5 w-5" />, color: 'sky' },
-        { id: 'conflicts', name: 'Conflict Report', icon: <FireIcon className="h-5 w-5" />, color: 'red' },
-        { id: 'gdelt', name: 'Global Media Watch', icon: <ClockIcon className="h-5 w-5" />, color: 'amber' },
-        { id: 'nationalPress', name: 'National Press', icon: <NewspaperIcon className="h-5 w-5" />, color: 'purple' },
+        { id: 'socialMedia', name: 'Social Media Feed', icon: <ChatBubbleLeftRightIcon className="h-4 w-4" />, color: 'sky' },
+        { id: 'conflicts', name: 'Conflict Report', icon: <FireIcon className="h-4 w-4" />, color: 'red' },
+        { id: 'gdelt', name: 'Global Media Watch', icon: <ClockIcon className="h-4 w-4" />, color: 'amber' },
+        { id: 'nationalPress', name: 'National Press', icon: <NewspaperIcon className="h-4 w-4" />, color: 'purple' },
     ],
     data: [
-        { id: 'factbook', name: 'Country Profile', icon: <BookOpenIcon className="h-5 w-5" />, color: 'indigo' },
-        { id: 'worldBank', name: 'Economic Indicators', icon: <ChartBarIcon className="h-5 w-5" />, color: 'green' },
-        { id: 'oecd', name: 'OECD Economic Outlook', icon: <ChartBarIcon className="h-5 w-5" />, color: 'cyan' },
-        { id: 'osm', name: 'Road Network', icon: <RoadIcon className="h-5 w-5" />, color: 'orange' },
-        { id: 'noaa', name: 'Climate & Environment', icon: <CloudIcon className="h-5 w-5" />, color: 'teal' },
-        { id: 'reliefWeb', name: 'Humanitarian Updates', icon: <LifebuoyIcon className="h-5 w-5" />, color: 'rose' },
-        { id: 'populationPyramid', name: 'Population Pyramid', icon: <ChartPieIcon className="h-5 w-5" />, color: 'pink' },
+        { id: 'factbook', name: 'Country Profile', icon: <BookOpenIcon className="h-4 w-4" />, color: 'indigo' },
+        { id: 'worldBank', name: 'Economic Indicators', icon: <ChartBarIcon className="h-4 w-4" />, color: 'green' },
+        { id: 'oecd', name: 'OECD Economic Outlook', icon: <ChartBarIcon className="h-4 w-4" />, color: 'cyan' },
+        { id: 'osm', name: 'Road Network', icon: <RoadIcon className="h-4 w-4" />, color: 'orange' },
+        { id: 'noaa', name: 'Climate & Environment', icon: <CloudIcon className="h-4 w-4" />, color: 'teal' },
+        { id: 'reliefWeb', name: 'Humanitarian Updates', icon: <LifebuoyIcon className="h-4 w-4" />, color: 'rose' },
+        { id: 'populationPyramid', name: 'Population Pyramid', icon: <ChartPieIcon className="h-4 w-4" />, color: 'pink' },
     ]
   };
 
@@ -86,13 +86,13 @@ const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishC
              <button
                 key={source.id}
                 onClick={() => onSelect(source.id)}
-                className={`w-full flex items-center space-x-3 px-3 py-3 text-sm font-medium rounded-md text-left transition-colors group ${
+                className={`w-full flex items-center space-x-2 px-2 py-1.5 text-xs font-medium rounded text-left transition-colors group ${
                 isActive
                     ? colors.active
                     : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50'
                 }`}
             >
-                {React.cloneElement(source.icon, { className: `h-5 w-5 transition-colors ${isActive ? colors.icon : 'text-slate-500 dark:text-slate-400'}`})}
+                {React.cloneElement(source.icon, { className: `h-4 w-4 transition-colors ${isActive ? colors.icon : 'text-slate-500 dark:text-slate-400'}`})}
                 <span className={`truncate ${isActive ? 'font-semibold' : ''}`}>{source.name}</span>
             </button>
           )
@@ -100,37 +100,37 @@ const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishC
   };
 
   return (
-    <aside className="sticky top-20">
-      <div className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-lg rounded-lg p-3 flex flex-col h-full transition-all duration-300">
-        <div className="p-2 mb-3">
-            <div className="flex items-center gap-4">
+    <aside className="h-full">
+      <div className="bg-white/70 dark:bg-slate-800/70 backdrop-blur-xl border border-white/20 dark:border-slate-700/50 shadow-lg rounded-lg p-2 flex flex-col h-full transition-all duration-300">
+        <div className="p-2 mb-2 flex-shrink-0">
+            <div className="flex items-center gap-2">
                 {flagUrl ? (
-                  <img src={flagUrl} alt={`Flag of ${englishCountryName}`} className="w-10 h-auto rounded-md object-contain shadow-lg border border-slate-200 dark:border-slate-700" />
+                  <img src={flagUrl} alt={`Flag of ${englishCountryName}`} className="w-6 h-auto rounded object-contain shadow border border-slate-200 dark:border-slate-700" />
                 ) : (
-                  <span className="text-3xl">🏳️</span>
+                  <span className="text-lg">🏳️</span>
                 )}
-                <h2 className="font-bold text-xl text-slate-900 dark:text-slate-100">{englishCountryName}</h2>
+                <h2 className="font-bold text-sm text-slate-900 dark:text-slate-100 truncate">{englishCountryName}</h2>
             </div>
         </div>
         
-        <div className="border-t border-slate-200/80 dark:border-slate-700/60 -mx-3 mb-3"></div>
+        <div className="border-t border-slate-200/80 dark:border-slate-700/60 -mx-2 mb-2"></div>
 
         {activeCategory === 'official' && legislativeInfo && (legislativeInfo.yasama_organi_sitesi || legislativeInfo.resmi_gazete_sitesi) && (
-            <div className="space-y-2 pb-3 mb-3 border-b border-slate-200/80 dark:border-slate-700/60 text-sm px-1">
+            <div className="space-y-1 pb-2 mb-2 border-b border-slate-200/80 dark:border-slate-700/60 text-xs flex-shrink-0">
                 {legislativeInfo.yasama_organi_sitesi && (
-                    <a href={legislativeInfo.yasama_organi_sitesi} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-md text-slate-600 dark:text-slate-300 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 group">
-                        <BuildingOfficeIcon className="h-5 w-5 flex-shrink-0 text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors" />
+                    <a href={legislativeInfo.yasama_organi_sitesi} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 group">
+                        <BuildingOfficeIcon className="h-3 w-3 flex-shrink-0 text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors" />
                         <div className="overflow-hidden">
-                            <p className="font-semibold text-slate-700 dark:text-slate-200">Legislative Body</p>
+                            <p className="font-semibold text-slate-700 dark:text-slate-200 text-xs">Legislative</p>
                             <p className="text-xs text-slate-500 dark:text-slate-400 truncate" title={legislativeInfo.yasama_organi}>{legislativeInfo.yasama_organi}</p>
                         </div>
                     </a>
                 )}
                 {legislativeInfo.resmi_gazete_sitesi && (
-                    <a href={legislativeInfo.resmi_gazete_sitesi} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 p-2 rounded-md text-slate-600 dark:text-slate-300 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 group">
-                        <BookOpenIcon className="h-5 w-5 flex-shrink-0 text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors" />
+                    <a href={legislativeInfo.resmi_gazete_sitesi} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 p-1.5 rounded text-slate-600 dark:text-slate-300 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 group">
+                        <BookOpenIcon className="h-3 w-3 flex-shrink-0 text-slate-400 dark:text-slate-500 group-hover:text-slate-600 dark:group-hover:text-slate-300 transition-colors" />
                          <div className="overflow-hidden">
-                            <p className="font-semibold text-slate-700 dark:text-slate-200">Official Gazette</p>
+                            <p className="font-semibold text-slate-700 dark:text-slate-200 text-xs">Gazette</p>
                             <p className="text-xs text-slate-500 dark:text-slate-400 truncate" title={legislativeInfo.resmi_gazete}>{legislativeInfo.resmi_gazete}</p>
                         </div>
                     </a>
@@ -138,31 +138,31 @@ const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishC
             </div>
         )}
 
-        <nav className="flex-grow space-y-1.5 px-1">
+        <nav className="flex-grow space-y-1 overflow-y-auto">
           {activeCategory === 'official' && (
             <>
             <button
                 onClick={() => onSelect('all')}
-                className={`w-full flex items-center space-x-3 px-3 py-3 text-sm font-medium rounded-md text-left transition-colors group ${
+                className={`w-full flex items-center space-x-2 px-2 py-1.5 text-xs font-medium rounded text-left transition-colors group ${
                 activeSelection === 'all'
                     ? 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400'
                     : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50'
                 }`}
             >
-                <Bars3Icon className={`h-5 w-5 transition-colors ${activeSelection === 'all' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`} />
+                <Bars3Icon className={`h-4 w-4 transition-colors ${activeSelection === 'all' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`} />
                 <span className="truncate">All Sources</span>
             </button>
 
             <button
                 onClick={() => onSelect('bookmarks')}
-                className={`w-full flex items-center justify-between space-x-3 px-3 py-3 text-sm font-medium rounded-md text-left transition-colors group ${
+                className={`w-full flex items-center justify-between space-x-2 px-2 py-1.5 text-xs font-medium rounded text-left transition-colors group ${
                 activeSelection === 'bookmarks'
                     ? 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400'
                     : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50'
                 }`}
             >
-                <div className="flex items-center space-x-3">
-                <BookmarkIcon className={`h-5 w-5 transition-colors ${activeSelection === 'bookmarks' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`} />
+                <div className="flex items-center space-x-2">
+                <BookmarkIcon className={`h-4 w-4 transition-colors ${activeSelection === 'bookmarks' ? 'text-blue-600 dark:text-blue-400' : 'text-slate-500 dark:text-slate-400'}`} />
                 <span className="truncate">Bookmarks</span>
                 </div>
                 <span className={`text-xs font-normal px-2 py-0.5 rounded-full ${activeSelection === 'bookmarks' ? 'bg-blue-200/50 text-blue-800 dark:bg-blue-500/20 dark:text-blue-300' : 'bg-slate-200 text-slate-600 dark:bg-slate-600/80 dark:text-slate-300'}`}>{bookmarkCount}</span>
@@ -189,7 +189,7 @@ const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishC
                         <button
                         key={ministryKey}
                         onClick={() => onSelect(ministryKey)}
-                        className={`w-full flex items-center space-x-3 px-3 py-3 text-sm font-medium rounded-md text-left transition-colors group ${
+                        className={`w-full flex items-center space-x-2 px-2 py-1.5 text-xs font-medium rounded text-left transition-colors group ${
                             activeSelection === ministryKey
                             ? 'bg-blue-100 text-blue-700 dark:bg-blue-500/20 dark:text-blue-400'
                             : 'text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50'
@@ -205,15 +205,17 @@ const MinistrySidebar: React.FC<MinistrySidebarProps> = ({ countryName, englishC
         </nav>
         <div className="pt-3 mt-auto border-t border-slate-200/80 dark:border-slate-700/60 mx-1">
            <button
-              className="w-full flex items-center space-x-3 px-3 py-3 text-sm font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 rounded-md group"
+              className="w-full flex items-center space-x-2 px-2 py-1.5 text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-100/70 dark:hover:bg-slate-700/50 rounded group"
             >
-              <SettingsIcon className="h-5 w-5 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />
+              <SettingsIcon className="h-4 w-4 text-slate-500 dark:text-slate-400 group-hover:text-blue-600 dark:group-hover:text-blue-500 transition-colors" />
               <span>Settings</span>
           </button>
         </div>
       </div>
     </aside>
   );
-};
+});
+
+MinistrySidebar.displayName = 'MinistrySidebar';
 
 export default MinistrySidebar;

@@ -1,13 +1,17 @@
 import React from 'react';
 import { CloudIcon } from './Icons';
 import { NoaaIndicator } from '../types';
+import BasePanel from './common/BasePanel';
 
 interface NoaaPanelProps {
   data: NoaaIndicator[];
   countryName: string;
+  loading?: boolean;
+  error?: string | null;
+  onRefresh?: () => void;
 }
 
-const NoaaPanel: React.FC<NoaaPanelProps> = ({ data, countryName }) => {
+const NoaaPanel: React.FC<NoaaPanelProps> = ({ data, countryName, loading, error, onRefresh }) => {
     const indicatorDisplayNames: Record<string, string> = {
       TAVG: "Average Temperature",
       PRCP: "Precipitation"
@@ -25,36 +29,32 @@ const NoaaPanel: React.FC<NoaaPanelProps> = ({ data, countryName }) => {
     }
 
     const hasData = data && data.some(d => d.value !== null);
-    const errorMessage = !hasData ? data?.[0]?.message : null;
+    const errorMessage = !hasData && !loading ? data?.[0]?.message || 'Could not retrieve recent climate data from NOAA. This may be due to API limitations or lack of reporting stations.' : null;
 
-    if (!hasData) {
-        return (
-            <div className="text-center p-16">
-                <CloudIcon className="mx-auto h-12 w-12 text-slate-400 dark:text-slate-500"/>
-                <h3 className="mt-4 text-xl font-semibold text-slate-800 dark:text-slate-100">No Climate Data</h3>
-                <p className="mt-2 text-slate-500 dark:text-slate-400 max-w-md mx-auto">{`Could not retrieve recent climate data from NOAA for ${countryName}. This may be due to API limitations or lack of reporting stations.`}</p>
-                {errorMessage && <p className="mt-4 text-xs text-red-500 dark:text-red-400/80 bg-red-500/10 px-2 py-1 rounded-md inline-block">Error: {errorMessage}</p>}
-            </div>
-        );
-    }
-    
     return (
-        <div>
-            <div className="p-6 md:p-8 border-b border-slate-200 dark:border-slate-700">
-                <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100">Climate & Environment</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-1">{`Recent climate data from NOAA's Global Historical Climatology Network for ${countryName}.`}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 md:p-8">
-                {data.map(indicator => (
-                    <div key={indicator.name} className="bg-slate-50/50 dark:bg-slate-800/30 border border-slate-200 dark:border-slate-700 rounded-lg p-5">
-                        <p className="text-sm text-slate-600 dark:text-slate-400 font-medium mb-1">{indicatorDisplayNames[indicator.name] || indicator.name}</p>
-                        <p className="text-3xl font-bold text-slate-900 dark:text-slate-100">{formatIndicatorValue(indicator)}</p>
-                        {indicator.date && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">Data for {formatDate(indicator.date)}</p>}
-                         {indicator.message && !indicator.value && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">{indicator.message}</p>}
-                    </div>
-                ))}
-            </div>
-        </div>
+        <BasePanel
+            title="Climate & Environment"
+            subtitle={`Recent climate data from NOAA's Global Historical Climatology Network for ${countryName}.`}
+            icon={<CloudIcon className="h-5 w-5 text-blue-600 dark:text-blue-500" />}
+            loading={loading}
+            error={error || errorMessage}
+            onRefresh={onRefresh}
+            variant="glass"
+            size="md"
+        >
+            {hasData ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    {data.map(indicator => (
+                        <div key={indicator.name} className="bg-slate-50/50 dark:bg-slate-800/30 border border-slate-200/70 dark:border-slate-700/50 rounded-lg p-4 transition-all hover:shadow-md">
+                            <p className="text-sm text-slate-600 dark:text-slate-400 font-medium mb-1">{indicatorDisplayNames[indicator.name] || indicator.name}</p>
+                            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">{formatIndicatorValue(indicator)}</p>
+                            {indicator.date && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">Data for {formatDate(indicator.date)}</p>}
+                            {indicator.message && !indicator.value && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">{indicator.message}</p>}
+                        </div>
+                    ))}
+                </div>
+            ) : null}
+        </BasePanel>
     );
 };
 

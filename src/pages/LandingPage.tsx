@@ -9,9 +9,7 @@ import { Tooltip } from 'react-tooltip';
 import { SearchIcon, ShieldCheckIcon, BeakerIcon, ArrowsRightLeftIcon, BuildingLibraryIcon, ChevronDownIcon, UserCircleIcon, GlobeAltIcon, GridIcon, ArrowRightOnRectangleIcon } from '../components/Icons';
 import CountrySelectorModal from '../components/CountrySelectorModal';
 import { CountryMappings } from '../services/countryDataService';
-import { performAiSearch } from '../services/geminiService';
-import { AiSearchResult } from '../types';
-import AISearchModal from '../components/AISearchModal';
+// Removed AI search imports
 import ThemeToggleButton from '../components/ThemeToggleButton';
 import RotatingGlobe from '../components/RotatingGlobe';
 import RotatingMoon from '../components/RotatingMoon';
@@ -40,13 +38,9 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [position, setPosition] = useState({ coordinates: [0, 20] as [number, number], zoom: 1 });
   const [hoveredGeoRsmKey, setHoveredGeoRsmKey] = useState<string | null>(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
   
-  // State for AI Search
-  const [searchQuery, setSearchQuery] = useState('');
-  const [searchResult, setSearchResult] = useState<AiSearchResult | null>(null);
-  const [isSearching, setIsSearching] = useState(false);
-  const [searchError, setSearchError] = useState<string | null>(null);
-  const [isSearchModalOpen, setIsSearchModalOpen] = useState(false);
+  // Removed AI Search state variables
   const [isOrgPanelOpen, setIsOrgPanelOpen] = useState(false);
 
   // Auth state
@@ -54,6 +48,32 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
   const [isProfileMenuOpen, setIsProfileMenuOpen] = useState(false);
   const profileMenuRef = useRef<HTMLDivElement>(null);
 
+  const [mapScale, setMapScale] = useState(120);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setMapScale(Math.min(Math.max(window.innerWidth / 12, 60), 150));
+    };
+    window.addEventListener('resize', handleResize);
+    handleResize();
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleMoveStart = () => {
+    // Optional: Add loading state or visual feedback
+  };
+
+  const handleMove = (pos: { coordinates: [number, number]; zoom: number }) => {
+    setPosition(pos);
+  };
 
   const handleMoveEnd = (pos: { coordinates: [number, number]; zoom: number }) => {
     const { zoom } = pos;
@@ -66,6 +86,11 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     lat = Math.max(20 - maxLatDeviation, Math.min(lat, 20 + maxLatDeviation));
 
     setPosition({ coordinates: [lon, lat], zoom });
+  };
+
+  const filterZoomEvent = (e: any) => {
+    // Add any custom zoom restrictions here
+    return true;
   };
 
   useEffect(() => {
@@ -108,35 +133,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     }
   };
 
-  const handleSearch = async () => {
-    if (!searchQuery.trim()) return;
-    
-    setIsSearchModalOpen(true);
-    setIsSearching(true);
-    setSearchResult(null);
-    setSearchError(null);
-    
-    try {
-        const result = await performAiSearch(searchQuery);
-        setSearchResult(result);
-    } catch (error) {
-        setSearchError(error instanceof Error ? error.message : 'An error occurred during the search.');
-    } finally {
-        setIsSearching(false);
-    }
-  };
-
-  const handleSearchKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === 'Enter' && !isSearching) {
-          handleSearch();
-      }
-  };
-
-  const closeSearchModal = () => {
-      setIsSearchModalOpen(false);
-      setSearchResult(null);
-      setSearchError(null);
-  }
+  // Removed search handler functions
 
   const AuthControls = () => {
     if (isAuthenticated && currentUser) {
@@ -197,7 +194,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
     return (
       <button 
         onClick={onLoginClick} 
-        className="h-10 px-4 flex items-center rounded-lg bg-slate-100 dark:bg-analyst-input border border-slate-300 dark:border-analyst-border text-slate-800 dark:text-analyst-text-primary text-sm font-medium transition-all duration-200 hover:scale-[1.05] hover:shadow-md"
+        className="h-10 px-4 flex items-center rounded-xl bg-gradient-to-r from-modern-primary to-modern-secondary text-white text-sm font-medium transition-all duration-300 hover:scale-105 hover:shadow-modern-glow shadow-modern animate-fade-in"
       >
         Login / Register
       </button>
@@ -206,26 +203,31 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
 
   return (
     // Update the main container div
-    <div className="min-h-screen w-full overflow-x-hidden font-sans relative text-slate-100 dark:text-slate-300 flex flex-col">
-    
-    // Update the map component
-    <ComposableMap
-      projectionConfig={{
-        rotate: [-10, 0, 0],
-        scale: isMobile() ? 40 : isTablet() ? 60 : 80
-      }}
-      className="w-full h-full"
-      style={{
-        width: "100%",
-        height: "100%",
-        maxHeight: isMobile() ? "calc(100vh - 180px)" : "calc(100vh - 120px)",
-        maxWidth: "100vw",
-        overflow: "visible"
-      }}
-    >
+    <div className="min-h-screen w-full overflow-x-hidden font-sans relative text-modern-text-primary-light dark:text-modern-text-primary flex flex-col bg-gradient-to-br from-modern-light to-modern-surface-light dark:from-modern-dark dark:to-modern-darker transition-all duration-300">
+    {/* Responsive map component */}
+    <div className="relative w-full h-full">
+      <ComposableMap
+        projectionConfig={{
+          rotate: [-10, 0, 0],
+          scale: Math.min(
+            Math.max(
+              window.innerWidth / 8,
+              60
+            ),
+            180
+          )
+        }}
+        className="w-full h-full"
+        style={{
+          width: "100%",
+          height: "100vh",
+          minHeight: "100vh",
+          overflow: "visible"
+        }}
+      >
     
     // Update the header for mobile
-    <header className="sticky top-0 z-30 h-auto py-2 md:h-16 bg-white/80 dark:bg-analyst-dark-bg/80 backdrop-blur-lg border-b border-slate-300/20 dark:border-analyst-border/50 safe-area-top">
+    <header className="sticky top-0 z-30 h-auto py-2 md:h-16 bg-modern-lighter/90 dark:bg-modern-surface/90 backdrop-blur-xl border-b border-modern-border-light-theme/30 dark:border-modern-border/50 safe-area-top shadow-modern transition-all duration-300">
       <div className="max-w-screen-2xl mx-auto px-4 md:px-6 flex flex-col md:flex-row md:items-center justify-between h-full gap-2">
         {/* Mobile-optimized header layout */}
       </div>
@@ -245,80 +247,98 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
 
       {/* Background container */}
       <div className="absolute inset-0 z-0 overflow-hidden">
-        {/* Light Mode Background */}
+        {/* Light Mode Background with moon */}
         <div className="absolute inset-0 bg-black dark:hidden" />
-        <div className="dark:hidden">
-            <RotatingMoon />
+        <div className="dark:hidden relative w-full h-full">
+            <RotatingMoon className="absolute inset-0 w-full h-full" />
         </div>
 
-
-        {/* Dark Mode Background */}
-        <div className="absolute inset-0 hidden dark:block bg-black" />
-        <div className="hidden dark:block">
-            <RotatingGlobe />
-        </div>
-
-        {/* Common Elements (Stars) */}
-        <div className="absolute top-0 left-0 w-full h-full opacity-70">
-            {stars.map(star => <Star key={star.key} style={star.style} />)}
+      {/* Dark Mode Background with globe and map container */}
+      <div className="absolute inset-0 hidden dark:block bg-black">
+        <div className="relative w-full h-full">
+          <RotatingGlobe className="absolute inset-0 w-full h-full" />
+          {/* Map container synchronized with globe */}
+          <div className="absolute inset-0 w-full h-full" style={{
+            touchAction: 'none',
+            userSelect: 'none',
+            position: 'relative',
+            zIndex: 0
+          }}>
+          <ComposableMap
+            projectionConfig={{
+              rotate: [-10, 0, 0],
+              scale: Math.min(
+                Math.max(
+                  window.innerWidth / (isMobile ? 8 : 10),
+                  isMobile ? 60 : 80
+                ),
+                isMobile ? 150 : 200
+              )
+            }}
+            className="w-full h-full"
+          style={{
+            width: '100%',
+            height: '100%',
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            minHeight: isMobile ? '400px' : '500px'
+          }}
+            >
+              {/* Keep existing map content */}
+            </ComposableMap>
+          </div>
         </div>
       </div>
 
+      {/* Common Elements (Stars) */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-70">
+          {stars.map(star => <Star key={star.key} style={star.style} />)}
+      </div>
+    </div>
 
-      {/* Content container - update to be responsive */}
-      <div className="relative z-10 flex flex-col h-full w-full bg-transparent max-w-full">
+    {/* Main content container */}
+    <div className="relative z-10 flex flex-col min-h-screen w-full bg-transparent">
+      {/* Header and other content remains the same */}
         <header className="sticky top-0 z-30 h-16 pt-safe-top bg-white/80 dark:bg-analyst-dark-bg/80 backdrop-blur-lg border-b border-slate-300/20 dark:border-analyst-border/50">
           <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 flex items-center justify-between h-full">
             {/* Left Section */}
-            <div className="flex items-center gap-3">
-                <GlobeAltIcon className="h-7 w-7 text-slate-800 dark:text-analyst-text-primary" />
-                <span className="text-xl font-medium text-slate-900 dark:text-analyst-text-primary">
+            <div className="flex items-center gap-3 group">
+                <div className="p-2 rounded-xl bg-gradient-to-br from-modern-primary to-modern-secondary shadow-modern-lg group-hover:shadow-modern-glow transition-all duration-300">
+                    <GlobeAltIcon className="h-5 w-5 text-white" />
+                </div>
+                <span className="text-xl font-bold bg-gradient-to-r from-modern-primary to-modern-secondary bg-clip-text text-transparent">
                     GovNews Global
                 </span>
             </div>
 
-            {/* Center Section */}
-            <div className="flex-grow flex justify-center px-4 md:px-8 max-w-xl mx-auto w-full">
-                <div className="relative w-full group">
-                    <div className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none">
-                        <SearchIcon className="w-5 h-5 text-slate-400 dark:text-analyst-text-secondary" />
-                    </div>
-                    <input
-                        type="text"
-                        placeholder="Search government news globally…"
-                        className="w-full h-10 bg-white/60 dark:bg-analyst-input/60 border border-slate-300/50 dark:border-analyst-border/50 rounded-full pl-11 pr-4 text-slate-900 dark:text-analyst-text-primary placeholder:text-analyst-text-secondary focus:outline-none focus:ring-2 focus:ring-analyst-accent/60 focus:border-transparent transition-shadow duration-300 shadow-md dark:shadow-black/20 hover:shadow-lg"
-                        value={searchQuery}
-                        onChange={(e) => setSearchQuery(e.target.value)}
-                        onKeyDown={handleSearchKeyDown}
-                        disabled={isSearching}
-                    />
-                </div>
-            </div>
+            {/* Center Section - Search bar removed */}
+            <div className="flex-grow"></div>
 
             {/* Right Section - Desktop */}
-            <div className="hidden md:flex items-center gap-4">
+            <div className="hidden md:flex items-center gap-3">
                  <button 
                     onClick={() => setIsOrgPanelOpen(true)}
-                    className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg bg-analyst-green"
+                    className="h-10 px-4 flex items-center gap-2 rounded-xl text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-modern-lg bg-gradient-to-r from-modern-success to-emerald-600 shadow-modern animate-fade-in"
                     title={t('Organizations')}
                 >
-                    <BuildingLibraryIcon className="h-5 w-5" />
+                    <BuildingLibraryIcon className="h-4 w-4" />
                     <span className="hidden lg:inline">{t('Organizations')}</span>
                 </button>
                 <button 
                     onClick={() => setView({ name: 'compare' })}
-                    className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg bg-analyst-orange"
+                    className="h-10 px-4 flex items-center gap-2 rounded-xl text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-modern-lg bg-gradient-to-r from-modern-warning to-orange-600 shadow-modern animate-fade-in"
                     title={t('Compare')}
                 >
-                    <ArrowsRightLeftIcon className="h-5 w-5" />
+                    <ArrowsRightLeftIcon className="h-4 w-4" />
                     <span className="hidden lg:inline">{t('Compare')}</span>
                 </button>
                 <button 
                     onClick={() => setIsModalOpen(true)}
-                    className="h-10 px-4 flex items-center gap-2 rounded-lg text-sm font-medium text-white transition-all duration-200 hover:scale-[1.05] hover:shadow-lg bg-analyst-accent"
+                    className="h-10 px-4 flex items-center gap-2 rounded-xl text-sm font-medium text-white transition-all duration-300 hover:scale-105 hover:shadow-modern-glow bg-gradient-to-r from-modern-primary to-modern-primary-dark shadow-modern animate-fade-in"
                     title={t('Search Countries')}
                 >
-                    <SearchIcon className="h-5 w-5" />
+                    <SearchIcon className="h-4 w-4" />
                     <span className="hidden md:inline">{t('Search Countries')}</span>
                 </button>
                 <AuthControls />
@@ -326,37 +346,29 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
                 <ThemeToggleButton />
             </div>
             
-            {/* Mobile Navigation */}
-            <div className="md:hidden flex items-center gap-2">
-              <ThemeToggleButton />
-              <LanguageSelector />
+            {/* Mobile Navigation - Updated */}
+            <div className="md:hidden flex items-center gap-1 sm:gap-2">
+              <div className="hidden sm:block">
+                <ThemeToggleButton />
+              </div>
+              <div className="hidden sm:block">
+                <LanguageSelector />
+              </div>
               <AuthControls />
               <MobileNavigation 
                 onSearchClick={handleSearch}
                 onCompareClick={() => setView({ name: 'compare' })}
                 onOrganizationsClick={() => setIsOrgPanelOpen(true)}
                 onCountrySearchClick={() => setIsModalOpen(true)}
+                onProfileClick={() => setIsProfileMenuOpen(true)}
               />
             </div>
           </div>
         </header>
         
-        <main className="flex-grow relative overflow-hidden flex items-center justify-center">
+        <main className="relative w-full h-full">
           <Tooltip id="map-tooltip" className="!bg-white dark:!bg-analyst-sidebar !text-slate-800 dark:!text-analyst-text-primary rounded-md shadow-lg !border !border-slate-200 dark:!border-analyst-border z-20" />
-          <ComposableMap
-            projectionConfig={{
-              rotate: [-10, 0, 0],
-              scale: window.innerWidth < 768 ? 50 : window.innerWidth < 1024 ? 65 : 80
-            }}
-            className="w-full h-full"
-            style={{
-                width: "100%",
-                height: "100%",
-                maxHeight: "calc(100vh - 120px - env(safe-area-inset-top) - env(safe-area-inset-bottom))",
-                maxWidth: "100vw",
-                overflow: "visible"
-            }}
-          >
+          {/* ComposableMap moved inside the globe container */}
             <defs>
                 <filter id="refraction-effect">
                     <feTurbulence type="fractalNoise" baseFrequency="0.01 0.05" numOctaves="3" seed="5" result="noise">
@@ -374,8 +386,12 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
             <ZoomableGroup
               center={position.coordinates}
               zoom={position.zoom}
-              minZoom={1}
+              minZoom={0.5}
+              maxZoom={8}
+              onMoveStart={handleMoveStart}
+              onMove={handleMove}
               onMoveEnd={handleMoveEnd}
+              filterZoomEvent={filterZoomEvent}
               // @ts-ignore - motionConfig is a valid prop but may be missing from older or incorrect type definitions.
               motionConfig={{
                 mass: 1,
@@ -442,17 +458,13 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
                     );
                   })
                 }
-              </Geographies>
-            </ZoomableGroup>
-          </ComposableMap>
-        </main>
 
-        <footer className="w-full text-center py-4 border-t border-slate-700/50 dark:border-analyst-border/50 bg-slate-900/50 dark:bg-black/20 backdrop-blur-sm flex-shrink-0 flex justify-center items-center gap-6">
-          <p className="text-slate-400 text-xs tracking-wider uppercase">GovNews Global</p>
+        <footer className="w-full text-center py-4 border-t border-modern-border-light-theme/30 dark:border-modern-border/50 bg-modern-lighter/80 dark:bg-modern-surface/80 backdrop-blur-xl flex-shrink-0 flex justify-center items-center gap-6 shadow-modern transition-all duration-300">
+          <p className="text-modern-text-secondary-light dark:text-modern-text-secondary text-xs tracking-wider uppercase font-medium">GovNews Global</p>
           {isAuthenticated && (
             <>
-              <span className="text-slate-700 dark:text-slate-700">•</span>
-              <button onClick={() => setView({ name: 'admin' })} className="text-slate-400 text-xs tracking-wider uppercase hover:text-slate-200 dark:hover:text-slate-300 transition-colors flex items-center gap-1.5">
+              <span className="text-modern-border-light-theme dark:text-modern-border">•</span>
+              <button onClick={() => setView({ name: 'admin' })} className="text-modern-text-secondary-light dark:text-modern-text-secondary text-xs tracking-wider uppercase hover:text-modern-primary dark:hover:text-modern-primary transition-all duration-300 flex items-center gap-1.5 hover:scale-105">
                  <ShieldCheckIcon className="h-3 w-3" />
                  {t('Admin Panel')}
               </button>
@@ -461,13 +473,7 @@ const LandingPage: React.FC<LandingPageProps> = ({ setView, countryMappings, onL
         </footer>
       </div>
 
-       <AISearchModal
-        isOpen={isSearchModalOpen}
-        onClose={closeSearchModal}
-        isLoading={isSearching}
-        result={searchResult}
-        error={searchError}
-      />
+       {/* AISearchModal removed */}
       <CountrySelectorModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}

@@ -1,28 +1,78 @@
-<<<<<<< HEAD
-# TheGovNews - Government News Aggregator
+# TheGovNews – Government News Aggregator
 
-Bu proje, resmi hükümet haber kaynakları için akıllı bir toplayıcıdır. İçeriği otomatik olarak alır, işler ve zenginleştirerek kullanıcılara güvenilir, aranabilir ve filtrelenebilir bir kamu bilgisi akışı sağlar.
+English | [Türkçe](README_tr.md)
 
-## Kurulum ve Çalıştırma
+An open-source, intelligent aggregator for official government news sources. It fetches, enriches, and presents reliable, searchable, and filterable public information in a modern, responsive UI.
 
-Bu proje modern bir frontend geliştirme ortamı kullanır ve harici bağımlılıklara ihtiyaç duymaz. Projeyi çalıştırmak için herhangi bir paket yöneticisi (`npm`, `yarn` vb.) kullanmanıza gerek yoktur.
+## Features
+- Official sources aggregation (ministries, agencies) with enriched context
+- Multi-language UI with i18next and auto language detection
+- Interactive world map (react-simple-maps) for country exploration
+- Panels for World Bank, NOAA, OECD, ReliefWeb and more
+- Mobile-first, responsive design with Tailwind CSS
+- Capacitor support to package the web app for iOS and Android
 
-Sadece bir HTTP sunucusu ile projenin kök dizinini sunmanız yeterlidir.
+## Tech Stack
+- React 18, TypeScript, Vite 6
+- Tailwind CSS (custom themes, animations)
+- i18next, i18next-browser-languagedetector, i18next-http-backend
+- react-simple-maps, react-tooltip
+- Capacitor (Android/iOS)
 
-**Örnek (VS Code Live Server Eklentisi ile):**
+## Getting Started
+Prerequisites: Node.js 18+ and npm.
 
-1.  VS Code'da "Live Server" eklentisini kurun.
-2.  `index.html` dosyasına sağ tıklayın ve "Open with Live Server" seçeneğini seçin.
-3.  Uygulama otomatik olarak varsayılan tarayıcınızda açılacaktır.
-
-**Örnek (Python'un dahili HTTP sunucusu ile):**
-
+1) Clone and install
 ```bash
-# Proje kök dizininde bu komutu çalıştırın
-python3 -m http.server
+git clone <your-fork-or-repo-url>
+cd Devlet
+npm install
 ```
-Ardından tarayıcınızda `http://localhost:8000` adresine gidin.
-=======
-# devlet
-devlet
->>>>>>> 4a32146b06635da6c925278737d3817bcbbf4531
+
+2) Environment variables (see SECURITY.md)
+```bash
+cp .env.example .env.local
+# Edit .env.local
+VITE_GEMINI_API_KEY=your_actual_api_key
+```
+
+3) Development
+```bash
+npm run dev
+```
+
+4) Build and preview
+```bash
+npm run build
+npm run preview
+```
+
+## Mobile (Capacitor)
+Android:
+```bash
+npm run build:android
+npm run open:android
+```
+
+iOS (requires macOS + Xcode):
+```bash
+npm run build:ios
+npm run open:ios
+```
+
+## Localization
+- Translations live under `locales/` and `public/locales/`
+- Add a new `<lang>.json`, then update i18n configuration if needed
+- Contributions for translations are welcome
+
+## Contributing
+We welcome issues, discussions, and PRs!
+- Fork the repo, create a feature branch (feat/your-feature)
+- Follow linting/formatting: `npm run lint` and `npm run lint:fix`, `npm run format`
+- Keep PRs focused and include screenshots for UI changes
+
+## Security
+Please read the security guidelines: see SECURITY.md.
+
+## License
+License to be defined by the project owner. If you plan to contribute, please open an issue to discuss the license choice.

@@ -2,6 +2,7 @@ import React from 'react';
 import { WorldBankIndicator } from '../../types';
 import { ChartBarIcon, UsersIcon } from '../Icons';
 import { indicatorConfig } from '../../services/worldBankService';
+import { BasePanel } from '../common/BasePanel';
 
 const indicatorNames: Record<string, string> = {
     'NY.GDP.MKTP.CD': 'Total GDP (USD)',
@@ -12,7 +13,15 @@ const indicatorNames: Record<string, string> = {
 };
 
 
-const WorldBankPanel: React.FC<{ data: WorldBankIndicator[], countryName: string }> = ({ data, countryName }) => {
+interface WorldBankPanelProps {
+    data: WorldBankIndicator[];
+    countryName: string;
+    loading?: boolean;
+    error?: string;
+    onRefresh?: () => void;
+}
+
+const WorldBankPanel: React.FC<WorldBankPanelProps> = ({ data, countryName, loading = false, error, onRefresh }) => {
     const indicatorIcons: Record<string, React.ReactNode> = {
         'NY.GDP.MKTP.CD': <ChartBarIcon className="h-6 w-6 text-blue-600 dark:text-blue-500" />,
         'NY.GDP.PCAP.CD': <ChartBarIcon className="h-6 w-6 text-blue-600 dark:text-blue-500" />,
@@ -41,39 +50,36 @@ const WorldBankPanel: React.FC<{ data: WorldBankIndicator[], countryName: string
 
     const hasData = data && data.some(d => d.value !== null);
     const errorMessage = !hasData ? data?.find(d => d.message)?.message : null;
-
-    if (!hasData) {
-        return (
-            <div className="text-center p-16">
-                <ChartBarIcon className="mx-auto h-12 w-12 text-slate-400 dark:text-slate-500"/>
-                <h3 className="mt-4 text-xl font-semibold text-slate-800 dark:text-slate-100">No Economic Data Available</h3>
-                <p className="mt-2 text-slate-500 dark:text-slate-400 max-w-md mx-auto">{`Could not retrieve World Bank economic data for ${countryName}.`}</p>
-                {errorMessage && <p className="mt-4 text-xs text-red-500 dark:text-red-400/80 bg-red-500/10 px-2 py-1 rounded-md inline-block">Error: {errorMessage}</p>}
-            </div>
-        );
-    }
+    const finalError = error || (!hasData ? `Could not retrieve World Bank economic data for ${countryName}.` : undefined);
     
     return (
-        <div>
-            <div className="p-6 md:p-8 border-b border-slate-200/70 dark:border-slate-700/50">
-                <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100">Economic Indicators</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-1">{`Key economic indicators from the World Bank for ${countryName}.`}</p>
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-6 md:p-8">
-                {data.map(indicator => (
-                    <div key={indicator.indicatorCode} className="bg-slate-50/30 dark:bg-slate-900/20 border border-slate-200/70 dark:border-slate-700/50 rounded-lg p-5 flex items-start gap-4">
-                        <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-full">
-                           {indicatorIcons[indicator.indicatorCode] || <ChartBarIcon className="h-6 w-6 text-slate-500" />}
+        <BasePanel
+            title="Economic Indicators"
+            subtitle={`Key economic indicators from the World Bank for ${countryName}.`}
+            icon={<ChartBarIcon className="h-6 w-6" />}
+            loading={loading}
+            error={finalError}
+            onRefresh={onRefresh}
+            variant="glass"
+            size="md"
+        >
+            {hasData && (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    {data.map(indicator => (
+                        <div key={indicator.indicatorCode} className="bg-slate-50/30 dark:bg-slate-900/20 border border-slate-200/70 dark:border-slate-700/50 rounded-lg p-5 flex items-start gap-4 hover:shadow-md hover:bg-slate-100/40 dark:hover:bg-slate-800/40 transition-all duration-300">
+                            <div className="bg-slate-100 dark:bg-slate-800 p-3 rounded-full transition-transform hover:scale-110">
+                               {indicatorIcons[indicator.indicatorCode] || <ChartBarIcon className="h-6 w-6 text-slate-500" />}
+                            </div>
+                            <div>
+                                <p className="text-sm text-slate-600 dark:text-slate-400 font-medium mb-1">{indicatorNames[indicator.indicatorCode] || indicator.indicator}</p>
+                                <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">{formatIndicatorValue(indicator)}</p>
+                                {indicator.year && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">Last updated: {indicator.year}</p>}
+                            </div>
                         </div>
-                        <div>
-                            <p className="text-sm text-slate-600 dark:text-slate-400 font-medium mb-1">{indicatorNames[indicator.indicatorCode] || indicator.indicator}</p>
-                            <p className="text-2xl font-bold text-slate-900 dark:text-slate-100">{formatIndicatorValue(indicator)}</p>
-                            {indicator.year && <p className="text-xs text-slate-500 dark:text-slate-500 mt-2">Last updated: {indicator.year}</p>}
-                        </div>
-                    </div>
-                ))}
-            </div>
-        </div>
+                    ))}
+                </div>
+            )}
+        </BasePanel>
     );
 };
 

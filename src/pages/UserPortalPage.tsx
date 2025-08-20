@@ -13,6 +13,7 @@ import ConfirmModal from '../components/admin/ConfirmModal';
 import { Portal, Article, Source, PortalSummaryStats, Topic } from '../types';
 import RotatingGlobe from '../components/RotatingGlobe';
 import AnalysisPanel from '../components/portal/AnalysisPanel';
+import { useIsMobile, useIsTablet, useScreenSize, getResponsiveColumns } from '../utils/responsive';
 
 interface UserPortalPageProps {
   setView: (view: { name: string; context?: any }) => void;
@@ -31,6 +32,12 @@ const UserPortalPage: React.FC<UserPortalPageProps> = ({ setView, countryMapping
   const [editingPortal, setEditingPortal] = useState<Portal | undefined>(undefined);
   const [portalToDelete, setPortalToDelete] = useState<Portal | null>(null);
   const [activeTab, setActiveTab] = useState<'feed' | 'analysis'>('feed');
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  
+  // Responsive hooks
+  const isMobile = useIsMobile();
+  const isTablet = useIsTablet();
+  const screenSize = useScreenSize();
 
   // Load portals from localStorage on initial mount
   useEffect(() => {
@@ -144,46 +151,106 @@ const UserPortalPage: React.FC<UserPortalPageProps> = ({ setView, countryMapping
   }
 
   return (
-    <div className="min-h-screen font-sans bg-analyst-dark-bg text-analyst-text-primary">
+    <div className="min-h-screen font-sans bg-gradient-to-br from-modern-dark to-modern-darker text-modern-text-primary transition-all duration-500">
       <div className="relative min-h-screen">
-        <div className="absolute inset-0 z-0 overflow-hidden opacity-50">
+        <div className="absolute inset-0 z-0 overflow-hidden opacity-30">
           <RotatingGlobe />
         </div>
         
-        <div className={`relative z-10 grid transition-all duration-300 ${isFocusMode ? 'grid-cols-12' : 'grid-cols-12 lg:gap-6'}`}>
-          <aside className={`transition-all duration-300 ${isFocusMode ? 'w-0 opacity-0 lg:w-0' : 'col-span-3 lg:col-span-2'}`}>
-            {!isFocusMode && <PortalLeftSidebar portals={portals} selectedPortalId={selectedPortalId} onSelectPortal={setSelectedPortalId} onCreatePortal={handleCreatePortal} onDeletePortal={setPortalToDelete} setView={setView} />}
+        <div className={`relative z-10 transition-all duration-300 ${isMobile ? 'flex flex-col h-full' : `grid ${isFocusMode ? 'grid-cols-12' : 'grid-cols-12 lg:gap-6'}`}`}>
+          {/* Mobile Sidebar Overlay */}
+          {isMobile && isSidebarOpen && (
+            <div 
+              className="fixed inset-0 bg-black/50 z-40 backdrop-blur-sm"
+              onClick={() => setIsSidebarOpen(false)}
+            />
+          )}
+          
+          {/* Left Sidebar */}
+          <aside className={`
+            transition-all duration-300 z-50
+            ${isMobile 
+              ? `fixed left-0 top-0 h-full w-80 bg-modern-surface shadow-modern-xl transform ${isSidebarOpen ? 'translate-x-0' : '-translate-x-full'}` 
+              : `${isFocusMode ? 'w-0 opacity-0 lg:w-0' : 'col-span-3 lg:col-span-2'}`
+            }
+          `}>
+            {(!isFocusMode || isMobile) && (
+              <PortalLeftSidebar 
+                portals={portals} 
+                selectedPortalId={selectedPortalId} 
+                onSelectPortal={(id) => {
+                  setSelectedPortalId(id);
+                  if (isMobile) setIsSidebarOpen(false);
+                }} 
+                onCreatePortal={handleCreatePortal} 
+                onDeletePortal={setPortalToDelete} 
+                setView={setView} 
+              />
+            )}
           </aside>
 
-          <main className={`transition-all duration-300 ${isFocusMode ? 'col-span-12' : 'col-span-9 lg:col-span-7'}`}>
-             <div className="p-0 md:py-6 md:pr-6 h-screen flex flex-col gap-6">
-                {selectedPortal && <PortalHeader portal={selectedPortal} onToggleFocusMode={() => setIsFocusMode(!isFocusMode)} onEditPortal={() => handleEditPortal(selectedPortal)} />}
+          {/* Main Content */}
+          <main className={`
+            transition-all duration-300 flex-1
+            ${isMobile 
+              ? 'flex flex-col h-full' 
+              : `${isFocusMode ? 'col-span-12' : 'col-span-9 lg:col-span-7'}`
+            }
+          `}>
+             <div className={`${isMobile ? 'p-4 h-full' : 'p-0 md:py-6 md:pr-6 h-screen'} flex flex-col gap-4 md:gap-6`}>
+                {selectedPortal && (
+                  <PortalHeader 
+                    portal={selectedPortal} 
+                    onToggleFocusMode={() => setIsFocusMode(!isFocusMode)} 
+                    onEditPortal={() => handleEditPortal(selectedPortal)}
+                    onToggleSidebar={isMobile ? () => setIsSidebarOpen(!isSidebarOpen) : undefined}
+                  />
+                )}
                 
-                 <div className="flex-grow overflow-y-auto pr-2">
-                    <div className="space-y-6">
+                 <div className="flex-grow overflow-y-auto">
+                    <div className="space-y-4 md:space-y-6">
                         {summaryStats && (
-                             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                                <PortalSummaryCard title="New Items (24h)" value={summaryStats.newItems24h} icon={<NewspaperIcon className="w-5 h-5 text-analyst-accent" />} />
-                                <PortalSummaryCard title="Breaking Alerts" value={summaryStats.breakingAlerts} icon={<BellIcon className="w-5 h-5 text-analyst-orange" />} />
-                                <PortalSummaryCard title="Top Topic" value={summaryStats.topTopics[0]?.topic.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || 'N/A'} icon={<SparklesIcon className="w-5 h-5 text-analyst-purple" />} />
-                                <PortalSummaryCard title="Sentiment Trend" value={summaryStats.sentimentTrend > 0 ? 'Positive' : 'Negative'} icon={<ChartBarIcon className="w-5 h-5 text-analyst-green" />} />
-                                <PortalSummaryCard title="Sources" value={summaryStats.sourcesCount} icon={<GlobeAltIcon className="w-5 h-5 text-teal-500" />} />
-                                <PortalSummaryCard title="Unread Items" value={summaryStats.unreadItems} icon={<BookmarkIcon className="w-5 h-5 text-indigo-500" />} />
+                             <div className={`grid gap-3 md:gap-4 ${getResponsiveColumns(screenSize, {
+                               xs: 2,
+                               sm: 2, 
+                               md: 3,
+                               lg: 6,
+                               xl: 6,
+                               '2xl': 6,
+                               '3xl': 6
+                             })}`}>
+                                <PortalSummaryCard title="New Items (24h)" value={summaryStats.newItems24h} icon={<NewspaperIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-primary" />} />
+                                <PortalSummaryCard title="Breaking Alerts" value={summaryStats.breakingAlerts} icon={<BellIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-warning" />} />
+                                <PortalSummaryCard title="Top Topic" value={summaryStats.topTopics[0]?.topic.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) || 'N/A'} icon={<SparklesIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-secondary" />} />
+                                <PortalSummaryCard title="Sentiment Trend" value={summaryStats.sentimentTrend > 0 ? 'Positive' : 'Negative'} icon={<ChartBarIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-success" />} />
+                                <PortalSummaryCard title="Sources" value={summaryStats.sourcesCount} icon={<GlobeAltIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-accent" />} />
+                                <PortalSummaryCard title="Unread Items" value={summaryStats.unreadItems} icon={<BookmarkIcon className="w-4 h-4 md:w-5 md:h-5 text-modern-info" />} />
                             </div>
                         )}
-                        <AIBriefPanel articles={filteredArticles} />
+                        
+                        {!isMobile && <AIBriefPanel articles={filteredArticles} />}
 
-                        <div className="flex-shrink-0 border-b border-analyst-border/50 px-4">
-                            <nav className="-mb-px flex space-x-6">
+                        <div className="flex-shrink-0 border-b border-modern-border/30 bg-modern-surface/50 backdrop-blur-sm rounded-t-xl overflow-hidden">
+                            <nav className="-mb-px flex">
                                 <button
                                     onClick={() => setActiveTab('feed')}
-                                    className={`py-3 px-1 border-b-2 text-sm font-medium ${activeTab === 'feed' ? 'border-analyst-accent text-analyst-accent' : 'border-transparent text-analyst-text-secondary hover:text-analyst-text-primary'}`}
+                                    className={`flex-1 py-3 px-3 md:px-4 border-b-2 text-sm font-medium transition-all duration-300 touch-manipulation ${
+                                      activeTab === 'feed' 
+                                        ? 'border-modern-primary text-modern-primary bg-modern-primary/10 shadow-modern' 
+                                        : 'border-transparent text-modern-text-secondary hover:text-modern-text-primary hover:bg-modern-surface/30'
+                                    }`}
+                                    style={{ minHeight: '48px' }}
                                 >
                                     Feed
                                 </button>
                                 <button
                                     onClick={() => setActiveTab('analysis')}
-                                    className={`py-3 px-1 border-b-2 text-sm font-medium ${activeTab === 'analysis' ? 'border-analyst-accent text-analyst-accent' : 'border-transparent text-analyst-text-secondary hover:text-analyst-text-primary'}`}
+                                    className={`flex-1 py-3 px-3 md:px-4 border-b-2 text-sm font-medium transition-all duration-300 touch-manipulation ${
+                                      activeTab === 'analysis' 
+                                        ? 'border-modern-primary text-modern-primary bg-modern-primary/10 shadow-modern' 
+                                        : 'border-transparent text-modern-text-secondary hover:text-modern-text-primary hover:bg-modern-surface/30'
+                                    }`}
+                                    style={{ minHeight: '48px' }}
                                 >
                                     Analysis
                                 </button>
@@ -192,14 +259,24 @@ const UserPortalPage: React.FC<UserPortalPageProps> = ({ setView, countryMapping
                         
                         {activeTab === 'feed' && <NewsFeedPanel feed={filteredArticles} />}
                         {activeTab === 'analysis' && <AnalysisPanel articles={filteredArticles} />}
+                        
+                        {/* Mobile AI Brief Panel at bottom */}
+                        {isMobile && (
+                          <div className="mt-6">
+                            <AIBriefPanel articles={filteredArticles} />
+                          </div>
+                        )}
                     </div>
                 </div>
             </div>
           </main>
 
-          <aside className={`transition-all duration-300 ${isFocusMode ? 'w-0 opacity-0' : 'hidden lg:block lg:col-span-3'}`}>
-             {!isFocusMode && selectedPortal && <PortalRightSidebar portal={selectedPortal} alerts={MOCK_PORTAL_ALERTS} countryMappings={countryMappings} setView={setView} />}
-          </aside>
+          {/* Right Sidebar - Hidden on mobile and tablet */}
+          {!isMobile && !isTablet && (
+            <aside className={`transition-all duration-300 ${isFocusMode ? 'w-0 opacity-0' : 'hidden lg:block lg:col-span-3'}`}>
+               {!isFocusMode && selectedPortal && <PortalRightSidebar portal={selectedPortal} alerts={MOCK_PORTAL_ALERTS} countryMappings={countryMappings} setView={setView} />}
+            </aside>
+          )}
         </div>
       </div>
        <CreatePortalModal 

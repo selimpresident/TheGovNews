@@ -2,6 +2,7 @@ import React, { useState, useMemo } from 'react';
 import { SocialPost, SocialMediaLinks } from '../types';
 import { Spinner } from './Spinner';
 import { ChatBubbleLeftRightIcon, XIcon, YouTubeIcon, InstagramIcon, ExternalLinkIcon } from './Icons';
+import { BasePanel } from './common/BasePanel';
 
 type Tab = 'all' | 'X' | 'YouTube';
 
@@ -57,9 +58,20 @@ interface SocialMediaPanelProps {
     posts: SocialPost[];
     links: SocialMediaLinks | null;
     countryName: string;
+    loading?: boolean;
+    error?: string;
+    onRefresh?: () => void;
 }
 
-const SocialMediaPanel: React.FC<SocialMediaPanelProps> = ({ status, posts, links, countryName }) => {
+const SocialMediaPanel: React.FC<SocialMediaPanelProps> = ({ 
+    status, 
+    posts, 
+    links, 
+    countryName, 
+    loading = status === 'loading',
+    error = status === 'error' || !links ? `We could not find configured social media accounts for ${countryName}.` : undefined,
+    onRefresh 
+}) => {
     const [activeTab, setActiveTab] = useState<Tab>('all');
     
     const filteredPosts = useMemo(() => {
@@ -67,53 +79,54 @@ const SocialMediaPanel: React.FC<SocialMediaPanelProps> = ({ status, posts, link
         return posts.filter(p => p.platform === activeTab);
     }, [posts, activeTab]);
 
-    if (status === 'error' || !links) {
-        return (
-            <div className="text-center p-16">
-                <ChatBubbleLeftRightIcon className="mx-auto h-12 w-12 text-slate-400 dark:text-slate-500" />
-                <h3 className="mt-4 text-xl font-semibold text-slate-800 dark:text-slate-100">No Social Media Accounts</h3>
-                <p className="mt-2 text-slate-500 dark:text-slate-400 max-w-md mx-auto">{`We could not find configured social media accounts for ${countryName}.`}</p>
-            </div>
-        );
-    }
-
     const hasPosts = posts.length > 0;
 
     return (
-        <div>
-            <div className="p-6 md:p-8 border-b border-slate-200 dark:border-slate-700">
-                <h2 className="text-2xl font-bold text-slate-800 dark:text-slate-100">Social Media Feed</h2>
-                <p className="text-slate-500 dark:text-slate-400 mt-1">{`Live updates from official social media accounts for ${countryName}.`}</p>
-                 {links.instagram && (
-                    <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity">
-                        <InstagramIcon className="h-4 w-4" />
-                        View on Instagram
-                    </a>
-                )}
-            </div>
+        <BasePanel
+            title="Social Media Feed"
+            subtitle={`Live updates from official social media accounts for ${countryName}.`}
+            icon={<ChatBubbleLeftRightIcon className="h-6 w-6" />}
+            loading={loading}
+            error={error}
+            onRefresh={onRefresh}
+            variant="glass"
+            size="md"
+        >
+            {links && (
+                <>
+                    {links.instagram && (
+                        <div className="mb-6">
+                            <a href={links.instagram} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 text-white text-sm font-semibold hover:opacity-90 transition-opacity">
+                                <InstagramIcon className="h-4 w-4" />
+                                View on Instagram
+                            </a>
+                        </div>
+                    )}
 
-            <div className="border-b border-slate-200 dark:border-slate-700 px-6">
-                 <nav className="-mb-px flex space-x-6">
-                    <button onClick={() => setActiveTab('all')} className={`py-3 px-1 border-b-2 text-sm font-medium ${activeTab === 'all' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>All</button>
-                    {links.x && <button onClick={() => setActiveTab('X')} className={`py-3 px-1 border-b-2 text-sm font-medium ${activeTab === 'X' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>X</button>}
-                    {links.youtube && <button onClick={() => setActiveTab('YouTube')} className={`py-3 px-1 border-b-2 text-sm font-medium ${activeTab === 'YouTube' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>YouTube</button>}
-                 </nav>
-            </div>
-            
-            {!hasPosts ? (
-                 <div className="text-center p-16">
-                    <p className="mt-2 text-slate-500 dark:text-slate-400">No recent posts could be fetched.</p>
-                    <div className="mt-4 flex justify-center gap-4">
-                        {links.x && <a href={links.x} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-500 hover:underline">View on X</a>}
-                        {links.youtube && <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-500 hover:underline">View on YouTube</a>}
+                    <div className="border-b border-slate-200 dark:border-slate-700 mb-6">
+                        <nav className="-mb-px flex space-x-6">
+                            <button onClick={() => setActiveTab('all')} className={`py-3 px-1 border-b-2 text-sm font-medium transition-colors ${activeTab === 'all' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>All</button>
+                            {links.x && <button onClick={() => setActiveTab('X')} className={`py-3 px-1 border-b-2 text-sm font-medium transition-colors ${activeTab === 'X' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>X</button>}
+                            {links.youtube && <button onClick={() => setActiveTab('YouTube')} className={`py-3 px-1 border-b-2 text-sm font-medium transition-colors ${activeTab === 'YouTube' ? 'border-blue-500 text-blue-600 dark:text-blue-400' : 'border-transparent text-slate-500 hover:text-slate-700 dark:text-slate-400 dark:hover:text-slate-200'}`}>YouTube</button>}
+                        </nav>
                     </div>
-                </div>
-            ) : (
-                <div className="divide-y divide-slate-200 dark:divide-slate-700">
-                    {filteredPosts.map(post => <PostItem key={post.id} post={post} />)}
-                </div>
+                    
+                    {!hasPosts ? (
+                        <div className="text-center py-12">
+                            <p className="text-slate-500 dark:text-slate-400">No recent posts could be fetched.</p>
+                            <div className="mt-4 flex justify-center gap-4">
+                                {links.x && <a href={links.x} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-500 hover:underline transition-colors">View on X</a>}
+                                {links.youtube && <a href={links.youtube} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-500 hover:underline transition-colors">View on YouTube</a>}
+                            </div>
+                        </div>
+                    ) : (
+                        <div className="divide-y divide-slate-200 dark:divide-slate-700">
+                            {filteredPosts.map(post => <PostItem key={post.id} post={post} />)}
+                        </div>
+                    )}
+                </>
             )}
-        </div>
+        </BasePanel>
     );
 };
 
