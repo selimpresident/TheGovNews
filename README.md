@@ -24,7 +24,7 @@ Prerequisites: Node.js 18+ and npm.
 
 1) Clone and install
 ```bash
-git clone <your-fork-or-repo-url>
+git clone https://github.com/selimpresident/TheGovNews.git
 cd Devlet
 npm install
 ```
