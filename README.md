@@ -1,5 +1,11 @@
 # TheGovNews – Government News Aggregator
 
+🔹 TheGovNews
+I’ve recently started TheGovNews, an open-source project built with curiosity and dedication. The goal is to grow it into something impactful, and I’d love to see it evolve with community support.
+
+If you’re interested in contributing, sharing feedback, or collaborating, your input will be highly appreciated. Together, we can make this project stronger. 🚀
+[![Watch the video](https://img.youtube.com/vi/P-Xg2oNqc7I/maxresdefault.jpg)](https://www.youtube.com/watch?v=P-Xg2oNqc7I)
+
 English | [Türkçe](README_tr.md)
 
 An open-source, intelligent aggregator for official government news sources. It fetches, enriches, and presents reliable, searchable, and filterable public information in a modern, responsive UI.
