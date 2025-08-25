@@ -30,7 +30,7 @@ Prerequisites: Node.js 18+ and npm.
 
 1) Clone and install
 ```bash
-git clone https://github.com/selimpresident/TheGovNews.git
+git clone https://github.com/selimpresident/thegovnews.git
 cd Devlet
 npm install
 ```
